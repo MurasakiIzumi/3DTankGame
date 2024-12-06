@@ -6,14 +6,26 @@ public class CameraChangeControl : MonoBehaviour
     [SerializeField] GameObject subCamera;
 
     private bool isZoom;
+    private Camera main;
+    private Camera sub;
+    private AudioListener mainLister;
+    private AudioListener subLister;
 
     void Start()
     {
-        mainCamera.SetActive(true);
-        subCamera.SetActive(false);
         isZoom = false;
+        main=mainCamera.GetComponent<Camera>();
+        sub=subCamera.GetComponent<Camera>();
+        mainLister=mainCamera.GetComponent<AudioListener>();
+        subLister=subCamera.GetComponent<AudioListener>();
+
+        main.depth = 1;
+        mainLister.enabled = true;
+        sub.depth = -1;
+        subLister.enabled = false;
 
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -29,15 +41,24 @@ public class CameraChangeControl : MonoBehaviour
 
         if (!isZoom)
         {
-            mainCamera.SetActive(false);
-            subCamera.SetActive(true);
+            main.depth = -1;
+            mainLister.enabled = false;
+            sub.depth = 1;
+            subLister.enabled = true;
             isZoom = true;
         }
         else
         {
-            mainCamera.SetActive(true);
-            subCamera.SetActive(false);
+            main.depth = 1;
+            mainLister.enabled = true;
+            sub.depth = -1;
+            subLister.enabled = false;
             isZoom = false;
         }
+    }
+
+    public bool GetisZoom()
+    {
+        return isZoom;
     }
 }

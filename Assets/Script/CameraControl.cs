@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.SceneView;
 
 public class CameraControl : MonoBehaviour
 {
@@ -17,7 +16,7 @@ public class CameraControl : MonoBehaviour
         distance = transform.position - Panzer.transform.position;
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (isMainCamera)
         {

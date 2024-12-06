@@ -19,7 +19,7 @@ public class PanzerGunControl : MonoBehaviour
     {
         timer_cooltime = coolTime;
         defultPos=Gun.transform.localPosition;
-        animationSpeed = 3.5f;
+        animationSpeed = 4f;
     }
 
     void Update()
