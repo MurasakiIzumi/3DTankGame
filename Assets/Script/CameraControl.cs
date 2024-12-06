@@ -6,14 +6,23 @@ public class CameraControl : MonoBehaviour
 {
     [SerializeField]  GameObject Panzer;
     [SerializeField] bool isMainCamera;
+    [SerializeField] CameraChangeControl cameraChange;
     [SerializeField]  float SmoothTime = 0.3f;
+    [Header("Panzer RotateSpeed")][SerializeField] float rotateSpeed;
 
     private Vector3 distance;
     private Vector3 Velocity = Vector3.zero;
+    private bool isZoom;
 
     void Start()
     {
         distance = transform.position - Panzer.transform.position;
+        isZoom = false;
+    }
+
+    void Update()
+    {
+        isZoom = cameraChange.GetisZoom();
     }
 
     void FixedUpdate()
@@ -46,6 +55,16 @@ public class CameraControl : MonoBehaviour
         if (Mathf.Abs(MouseX) > 0.001f)
         {
             transform.RotateAround(Panzer.transform.position, Vector3.up, MouseX);
+        }
+
+        if (isZoom)
+        {
+            MouseX= Input.GetAxis("Horizontal");
+
+            if (Mathf.Abs(MouseX) > 0.001f)
+            {
+                transform.RotateAround(Panzer.transform.position, Vector3.up, MouseX * rotateSpeed);
+            }
         }
     }
 }

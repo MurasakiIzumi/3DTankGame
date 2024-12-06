@@ -427,7 +427,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panzer: {fileID: 1723818342}
   isMainCamera: 1
+  cameraChange: {fileID: 1723818345}
   SmoothTime: 0.3
+  rotateSpeed: 0.7
 --- !u!81 &963194231
 AudioListener:
   m_ObjectHideFlags: 0
@@ -536,7 +538,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panzer: {fileID: 1723818342}
   isMainCamera: 1
+  cameraChange: {fileID: 1723818345}
   SmoothTime: 0.3
+  rotateSpeed: 0.7
 --- !u!108 &1206587399
 Light:
   m_ObjectHideFlags: 0
@@ -549,7 +553,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 5.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -599,6 +603,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1236195575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3161205291356685102, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
+  m_PrefabInstance: {fileID: 300395944004492741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1417580110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8921654634602478444, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
@@ -790,7 +799,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panzer: {fileID: 1417580110}
   isMainCamera: 0
+  cameraChange: {fileID: 1723818345}
   SmoothTime: 0.3
+  rotateSpeed: 0.7
 --- !u!4 &1723818344
 Transform:
   m_ObjectHideFlags: 0
@@ -1021,8 +1032,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7324912892713786425, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
+      propertyPath: GunSystem
+      value: 
+      objectReference: {fileID: 1236195575}
+    - target: {fileID: 7324912892713786425, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
       propertyPath: viewRange
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7324912892713786425, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
       propertyPath: mainCamera
