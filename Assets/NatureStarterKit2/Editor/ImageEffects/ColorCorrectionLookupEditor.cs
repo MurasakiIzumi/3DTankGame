@@ -59,7 +59,7 @@ namespace UnityStandardAssets.ImageEffects
                     {
                         textureImporter.isReadable = true;
                         textureImporter.mipmapEnabled = false;
-                        textureImporter.textureFormat = TextureImporterFormat.AutomaticTruecolor;
+                        textureImporter.textureCompression = TextureImporterCompression.Uncompressed;
                         AssetDatabase.ImportAsset (path, ImportAssetOptions.ForceUpdate);
                         //tex = AssetDatabase.LoadMainAssetAtPath(path);
                     }
