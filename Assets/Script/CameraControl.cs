@@ -43,7 +43,6 @@ public class CameraControl : MonoBehaviour
     private void CameraRotate()
     {
         float MouseX = Input.GetAxis("Mouse X");
-        float MouseY = Input.GetAxis("Mouse Y");
 
         if (Mathf.Abs(MouseX) > 0.001f)
         {
