@@ -1,45 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraChangeControl : MonoBehaviour
 {
-    [SerializeField] Camera mainCamera;
-    [SerializeField] Camera subCamera;
+    [SerializeField] GameObject mainCamera;
+    [SerializeField] GameObject subCamera;
 
-    private int zoom;
+    private bool isZoom;
 
     void Start()
     {
-        mainCamera.enabled = true;
-        subCamera.enabled = false;
+        mainCamera.SetActive(true);
+        subCamera.SetActive(false);
+        isZoom = false;
 
-        zoom = -1;
+        Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(1)) 
         {
-            zoom *= -1;
+            CameraChange();
         }
-
-        CameraChange();
     }
 
     private void CameraChange()
     {
 
-        if (zoom > 0)
+        if (!isZoom)
         {
-            mainCamera.enabled = false;
-            subCamera.enabled = true;
+            mainCamera.SetActive(false);
+            subCamera.SetActive(true);
+            isZoom = true;
         }
         else
         {
-            mainCamera.enabled = true;
-            subCamera.enabled = false;
+            mainCamera.SetActive(true);
+            subCamera.SetActive(false);
+            isZoom = false;
         }
     }
 }

@@ -6,13 +6,14 @@ public class PanzerGunControl : MonoBehaviour
 {
     [SerializeField] Transform CreatePoint;
     [SerializeField] GameObject Bullet;
+    [SerializeField] GameObject GunSpark;
     [SerializeField] GameObject Gun;
     [SerializeField] float coolTime;
 
     private float timer_cooltime;
     private float animationSpeed;
     private Vector3 defultPos;
-
+    private Vector3 sparkPos;
 
     void Start()
     {
@@ -76,7 +77,8 @@ public class PanzerGunControl : MonoBehaviour
 
     private void SetBullet()
     {
+        sparkPos = CreatePoint.transform.position + CreatePoint.transform.forward * 0.2f;
         Instantiate(Bullet, CreatePoint.transform.position, transform.rotation);
-        //Instantiate(GunSpark, GunSparkPos.position, transform.rotation);
+        Instantiate(GunSpark, sparkPos, transform.rotation);
     }
 }

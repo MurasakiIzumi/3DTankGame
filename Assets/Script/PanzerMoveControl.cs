@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PanzerMoveControl : MonoBehaviour
 {
+    [SerializeField] WheelSmokeControl smokeR;
+    [SerializeField] WheelSmokeControl smokeL;
     [SerializeField] float forwardSpeed;
-    private float backSpeed;
     [SerializeField] float rotateSpeed;
 
+    private float backSpeed;
     private Vector3 velocity;
 
     void Start()
@@ -46,5 +48,16 @@ public class PanzerMoveControl : MonoBehaviour
 
         transform.localPosition += velocity * Time.fixedDeltaTime;
         transform.Rotate(0, horizontal * rotateSpeed, 0);
+
+        if ((horizontal == 0) && (vertiacl == 0))
+        {
+            WheelSmokeOn();
+        }
+    }
+
+    private void WheelSmokeOn()
+    {
+        smokeR.StartSmoke();
+        smokeL.StartSmoke();
     }
 }

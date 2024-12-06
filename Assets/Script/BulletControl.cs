@@ -8,7 +8,7 @@ public class BulletControl : MonoBehaviour
     [SerializeField] float dropSpeed;
     [SerializeField] int Damage;
     [Header("—Ž‰ºŠJŽnŽžŠÔ")][SerializeField] float rangeTime;
-    //[Header("–½’†")] public GameObject Spark;
+    [Header("–½’†")][SerializeField] GameObject Spark;
 
     private float timer_range;
 
@@ -34,14 +34,32 @@ public class BulletControl : MonoBehaviour
 
         if (timer_range > rangeTime)
         {
+            moveSpeed *= 0.8f;
             transform.position += Vector3.down * dropSpeed * Time.deltaTime;
         }
     }
 
-    public void Hit()
+    private void HitGround()
     {
-        //Instantiate(Spark, transform.position, Quaternion.identity);
-
+        Instantiate(Spark, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+    private void HitWall()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            HitGround();
+        }
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            HitWall();
+        }
+
     }
 }

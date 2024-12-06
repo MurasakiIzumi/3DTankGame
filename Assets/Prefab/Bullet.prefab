@@ -133,7 +133,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   dropSpeed: 1
   Damage: 1
   rangeTime: 1
+  Spark: {fileID: 1963387136426011568, guid: 903eee204a3a2e849a301693e556a684, type: 3}
 --- !u!1 &4287049739688741765
 GameObject:
   m_ObjectHideFlags: 0
