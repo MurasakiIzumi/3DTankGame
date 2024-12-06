@@ -41,6 +41,7 @@ public class PanzerMoveControl : MonoBehaviour
         else if ((vertiacl < -0.1)) 
         {
             velocity *= backSpeed;
+            horizontal *= -1f;
         }
 
         transform.localPosition += velocity * Time.fixedDeltaTime;
