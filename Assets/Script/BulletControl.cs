@@ -34,7 +34,6 @@ public class BulletControl : MonoBehaviour
 
         if (timer_range > rangeTime)
         {
-            moveSpeed *= 0.8f;
             transform.position += Vector3.down * dropSpeed * Time.deltaTime;
         }
     }
