@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PanzerHeadRotateControl : MonoBehaviour
 {
-    [SerializeField] GameObject mainCamera;
     [SerializeField] float rotateSpeed;
-    [SerializeField] CameraChangeControl cameraChange;
     [SerializeField] float viewRange;
     [SerializeField] GameObject GunSystem;
 
+    private GameObject targetPoint;
+    private CameraChangeControl cameraChange;
     private bool isZoom;
     void Start()
     {
+        targetPoint = GameObject.FindWithTag("TargetPoint");
+        cameraChange = GameObject.FindWithTag("CameraSystem").GetComponent<CameraChangeControl>();
         isZoom = false;
     }
 
@@ -37,7 +39,7 @@ public class PanzerHeadRotateControl : MonoBehaviour
     {
         GunSystem.transform.localEulerAngles = Vector3.zero;
 
-        Vector3 target=mainCamera.transform.position;
+        Vector3 target=targetPoint.transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target - transform.position), rotateSpeed * Time.fixedDeltaTime);
     }
 

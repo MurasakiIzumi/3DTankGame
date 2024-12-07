@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CameraChangeControl : MonoBehaviour
 {
-    [SerializeField] GameObject mainCamera;
-    [SerializeField] GameObject subCamera;
+    private GameObject mainCamera;
+    private GameObject subCamera;
 
     private bool isZoom;
     private Camera main;
@@ -13,6 +13,9 @@ public class CameraChangeControl : MonoBehaviour
 
     void Start()
     {
+        mainCamera = GameObject.FindWithTag("MainCamera");
+        subCamera = GameObject.FindWithTag("SubCamera");
+
         isZoom = false;
         main=mainCamera.GetComponent<Camera>();
         sub=subCamera.GetComponent<Camera>();
