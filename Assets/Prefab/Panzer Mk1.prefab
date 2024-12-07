@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 2652758537370991059}
   - component: {fileID: 4208030541151241702}
   - component: {fileID: 5677178535104427175}
+  - component: {fileID: 6459021950280951287}
   m_Layer: 0
   m_Name: Parts
   m_TagString: PLBackCollision
@@ -369,6 +370,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6459021950280951287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455681493327338431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &786351435023758424
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,9 +394,10 @@ GameObject:
   - component: {fileID: 187723302849023526}
   - component: {fileID: 3381442633402956613}
   - component: {fileID: 395740839525735045}
+  - component: {fileID: 8212533460314392702}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLHeadCollsion
+  m_TagString: PLHeadCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -476,6 +490,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8212533460314392702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786351435023758424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1473667320533654148
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +514,7 @@ GameObject:
   - component: {fileID: 502877711903844476}
   - component: {fileID: 429451605176654166}
   - component: {fileID: 8415731746184103682}
+  - component: {fileID: 8711228875738765066}
   m_Layer: 0
   m_Name: BodyRight
   m_TagString: PLRightCollision
@@ -581,6 +608,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8711228875738765066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473667320533654148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1539842198987551428
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +632,7 @@ GameObject:
   - component: {fileID: 2191037198581131426}
   - component: {fileID: 5203607751517285564}
   - component: {fileID: 4943451113760458705}
+  - component: {fileID: 3139175289179142329}
   m_Layer: 0
   m_Name: Parts
   m_TagString: PLLeftCollision
@@ -686,6 +726,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3139175289179142329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539842198987551428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1858403585733470678
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +750,7 @@ GameObject:
   - component: {fileID: 3263211367189903125}
   - component: {fileID: 6260379254974812700}
   - component: {fileID: 1466493190198242312}
+  - component: {fileID: 8808334510537889115}
   m_Layer: 0
   m_Name: Parts
   m_TagString: PLFowCollision
@@ -791,6 +844,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8808334510537889115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858403585733470678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2181062163509333824
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,9 +1034,10 @@ GameObject:
   - component: {fileID: 6686847843522025451}
   - component: {fileID: 239252021885939986}
   - component: {fileID: 9194200585421718639}
+  - component: {fileID: 1161604122184378403}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLHeadCollsion
+  m_TagString: PLHeadCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1064,6 +1130,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &1161604122184378403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865229171482739566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3161205291356685102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,6 +1208,7 @@ GameObject:
   - component: {fileID: 6417897137392929658}
   - component: {fileID: 8849798880969716448}
   - component: {fileID: 8578398318333723857}
+  - component: {fileID: 8301970510498841345}
   m_Layer: 0
   m_Name: Parts
   m_TagString: PLBackCollision
@@ -1223,6 +1302,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8301970510498841345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218282301613934697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3405805453923144152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,6 +1492,7 @@ GameObject:
   - component: {fileID: 4907462285454947625}
   - component: {fileID: 1014652140007871191}
   - component: {fileID: 5025308562822765664}
+  - component: {fileID: 7840770260282121906}
   m_Layer: 0
   m_Name: Parts
   m_TagString: PLRightCollision
@@ -1494,6 +1586,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7840770260282121906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3525107130877857775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3638398600693173749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,9 +1610,10 @@ GameObject:
   - component: {fileID: 347762702421562079}
   - component: {fileID: 1962958883216562591}
   - component: {fileID: 2782071425984493662}
+  - component: {fileID: 34700699421437110}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLHeadCollsion
+  m_TagString: PLHeadCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1599,6 +1704,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &34700699421437110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3638398600693173749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4070142646248334685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,9 +1728,10 @@ GameObject:
   - component: {fileID: 8451930274884529207}
   - component: {fileID: 5767727446546769135}
   - component: {fileID: 7177261771844383966}
+  - component: {fileID: 2419895269489992026}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLHeadCollsion
+  m_TagString: PLHeadCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,6 +1822,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2419895269489992026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4070142646248334685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4373963602691692281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,9 +1929,10 @@ GameObject:
   - component: {fileID: 7271317282079628427}
   - component: {fileID: 8170595797733711428}
   - component: {fileID: 4339387088446061848}
+  - component: {fileID: 1239556622134868551}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLHeadCollsion
+  m_TagString: PLHeadCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1892,6 +2023,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1239556622134868551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400285768148744388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4600606167548864634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +2047,7 @@ GameObject:
   - component: {fileID: 3510644870206608893}
   - component: {fileID: 8480603542337940603}
   - component: {fileID: 2825385604284152218}
+  - component: {fileID: 5481863002895855115}
   m_Layer: 0
   m_Name: Parts
   m_TagString: PLFowCollision
@@ -1997,6 +2141,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5481863002895855115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4600606167548864634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4646669636761076934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,6 +2248,7 @@ GameObject:
   - component: {fileID: 6747414775976640064}
   - component: {fileID: 3576694164325677266}
   - component: {fileID: 3329515535199786501}
+  - component: {fileID: 8327191232568935680}
   m_Layer: 0
   m_Name: WheelR
   m_TagString: PLRightCollision
@@ -2186,6 +2343,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8327191232568935680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735149287596121958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6375042138982092592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2367,7 @@ GameObject:
   - component: {fileID: 5257090417485135040}
   - component: {fileID: 4748895403125075000}
   - component: {fileID: 3865508389741594798}
+  - component: {fileID: 6706647925518310320}
   m_Layer: 0
   m_Name: BodyBack
   m_TagString: PLBackCollision
@@ -2291,6 +2461,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6706647925518310320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375042138982092592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6707158752066248390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,6 +2568,7 @@ GameObject:
   - component: {fileID: 7609758311514791263}
   - component: {fileID: 5471485992813864363}
   - component: {fileID: 4633153648659429697}
+  - component: {fileID: 7797811225181624659}
   m_Layer: 0
   m_Name: BodyLeft
   m_TagString: PLLeftCollision
@@ -2479,6 +2662,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7797811225181624659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6965480797523698315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7116814419511138057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,6 +2686,7 @@ GameObject:
   - component: {fileID: 5079559391052124419}
   - component: {fileID: 6167162542709518336}
   - component: {fileID: 7043892030670637577}
+  - component: {fileID: 5274398055628745338}
   m_Layer: 0
   m_Name: Parts
   m_TagString: PLFowCollision
@@ -2584,6 +2780,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5274398055628745338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116814419511138057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7316127538640350288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2762,9 +2970,10 @@ GameObject:
   - component: {fileID: 8808737498249723219}
   - component: {fileID: 5963574392780368678}
   - component: {fileID: 6095967746450323835}
+  - component: {fileID: 5524832360863943098}
   m_Layer: 0
   m_Name: Head
-  m_TagString: PLHeadCollsion
+  m_TagString: PLHeadCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2855,6 +3064,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5524832360863943098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7866223376962939507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8839412350799538675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,6 +3088,7 @@ GameObject:
   - component: {fileID: 3004904880106414373}
   - component: {fileID: 7963369335895231805}
   - component: {fileID: 1461465486581185848}
+  - component: {fileID: 5125021721827251199}
   m_Layer: 0
   m_Name: BodyFoward
   m_TagString: PLFowCollision
@@ -2960,6 +3182,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5125021721827251199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839412350799538675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8921654634602478444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,6 +3205,7 @@ GameObject:
   - component: {fileID: 6124981216267720614}
   - component: {fileID: 618216519211449091}
   - component: {fileID: 4780830165718219454}
+  - component: {fileID: 6308941596474890534}
   - component: {fileID: 3869043718282188141}
   m_Layer: 0
   m_Name: Panzer Mk1
@@ -3039,6 +3274,37 @@ MonoBehaviour:
   smokeL: {fileID: 6772850251232767038}
   forwardSpeed: 5
   rotateSpeed: 0.7
+--- !u!114 &6308941596474890534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921654634602478444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68fdb0b3fd6cceb4289981bb9e70afdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headState: {fileID: 383177256600154955}
+  forwardState: {fileID: 3405805453923144152}
+  backState: {fileID: 7316127538640350288}
+  rightState: {fileID: 7656924623829047963}
+  leftState: {fileID: 4373963602691692281}
+  Green: {fileID: 2100000, guid: 43cad21555baaa9488c216d6121a6130, type: 2}
+  Yellow: {fileID: 2100000, guid: 526a9cae05758ab4792462cab938dcbf, type: 2}
+  Red: {fileID: 2100000, guid: 27144b839ce1eec44a885ccfd45ace5c, type: 2}
+  Black: {fileID: 2100000, guid: 80b052997fe225947ac29cdc1d5ecd1f, type: 2}
+  DeepGreen: {fileID: 2100000, guid: fba86be0679fe0b47b527bb91a56c1e3, type: 2}
+  DeepYellow: {fileID: 2100000, guid: 3e9f89a5b0116c948aa7ee49bff1bbfa, type: 2}
+  DeepRed: {fileID: 2100000, guid: c4cbb1b8e1370454f9ea909ff0b8de64, type: 2}
+  DeepBlack: {fileID: 2100000, guid: 7e69003339ca9054fa5e1854da65eb3a, type: 2}
+  headHP: 3
+  forwardHP: 3
+  backHP: 3
+  rightHP: 3
+  leftHP: 3
+  coreHP: 3
 --- !u!82 &3869043718282188141
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3247,8 +3513,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3139429465635938757}
   - {fileID: 3988622891096772364}
+  - {fileID: 3139429465635938757}
   - {fileID: 1169832255838919748}
   - {fileID: 2814820533138566862}
   - {fileID: 6736606401684594781}
@@ -3278,6 +3544,7 @@ GameObject:
   - component: {fileID: 4940414131264756398}
   - component: {fileID: 3374588494731248293}
   - component: {fileID: 8080644781835541853}
+  - component: {fileID: 3278955624587130109}
   m_Layer: 0
   m_Name: WheelL
   m_TagString: PLLeftCollision
@@ -3372,6 +3639,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3278955624587130109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178911505428548414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b52bee39d5f14abed1da44a2c01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1829895584709511342
 PrefabInstance:
   m_ObjectHideFlags: 0
