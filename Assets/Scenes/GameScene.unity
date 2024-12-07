@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &115066090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 442996222942594705, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
-  m_PrefabInstance: {fileID: 300395944004492741}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &253780129
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,9 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09a5d3583a4cc742b2db6df97d651c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1723818342}
   isMainCamera: 1
-  cameraChange: {fileID: 1723818345}
   SmoothTime: 0.3
   rotateSpeed: 0.7
 --- !u!81 &963194231
@@ -503,7 +496,7 @@ GameObject:
   - component: {fileID: 1206587398}
   m_Layer: 0
   m_Name: Target Point
-  m_TagString: Untagged
+  m_TagString: TargetPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -535,21 +528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09a5d3583a4cc742b2db6df97d651c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1723818342}
   isMainCamera: 1
-  cameraChange: {fileID: 1723818345}
   SmoothTime: 0.3
   rotateSpeed: 0.7
---- !u!1 &1236195575 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3161205291356685102, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
-  m_PrefabInstance: {fileID: 300395944004492741}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1417580110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8921654634602478444, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
-  m_PrefabInstance: {fileID: 300395944004492741}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1567532626
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,8 +697,8 @@ GameObject:
   - component: {fileID: 1723818343}
   - component: {fileID: 1723818345}
   m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
+  m_Name: CameraSystem
+  m_TagString: CameraSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -734,9 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09a5d3583a4cc742b2db6df97d651c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1417580110}
   isMainCamera: 0
-  cameraChange: {fileID: 1723818345}
   SmoothTime: 0.3
   rotateSpeed: 0.7
 --- !u!4 &1723818344
@@ -768,8 +747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18bef8e7e781b8c43a16c93b7f294012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 963194225}
-  subCamera: {fileID: 115066090}
 --- !u!1 &1845055967
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,22 +949,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7324912892713786425, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
-      propertyPath: GunSystem
-      value: 
-      objectReference: {fileID: 1236195575}
-    - target: {fileID: 7324912892713786425, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
-      propertyPath: viewRange
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7324912892713786425, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 1206587396}
-    - target: {fileID: 7324912892713786425, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
-      propertyPath: cameraChange
-      value: 
-      objectReference: {fileID: 1723818345}
     - target: {fileID: 8921654634602478444, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
       propertyPath: m_Name
       value: Panzer Mk1

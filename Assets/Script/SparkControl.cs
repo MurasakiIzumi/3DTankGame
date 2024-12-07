@@ -7,17 +7,22 @@ public class SparkControl : MonoBehaviour
     public ParticleSystem ParticleSystem1;
     public ParticleSystem ParticleSystem2;
     public ParticleSystem ParticleSystem3;
+    private AudioSource audioSource;
 
     public float OverTime;
     private bool isOver1;
     private bool isOver2;
     private bool isOver3;
+    private bool isOver4;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         isOver1 = false;
         isOver2 = false;
         isOver3 = false;
+        isOver4 = false;
     }
 
     void Update()
@@ -49,7 +54,16 @@ public class SparkControl : MonoBehaviour
         }
         else { isOver3 = true; }
 
-        if (isOver1 && isOver2 && isOver3)
+        if (audioSource)
+        {
+            if (audioSource.time >= audioSource.clip.length)
+            {
+                isOver4 = true;
+            }
+        }
+        else { isOver4 = true; }
+
+        if (isOver1 && isOver2 && isOver3 && isOver4)
         {
             Destroy(gameObject);
         }

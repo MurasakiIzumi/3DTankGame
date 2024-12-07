@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Wall
   - SubCamera
+  - CameraSystem
+  - TargetPoint
   layers:
   - Default
   - TransparentFX

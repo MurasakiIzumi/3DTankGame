@@ -11,10 +11,13 @@ public class PanzerMoveControl : MonoBehaviour
 
     private float backSpeed;
     private Vector3 velocity;
+    private AudioSource audioSource;
 
     void Start()
     {
         backSpeed = forwardSpeed / 2;
+        audioSource=GetComponent<AudioSource>();
+        audioSource.volume = 0.05f;
     }
 
     void Update()
@@ -52,6 +55,17 @@ public class PanzerMoveControl : MonoBehaviour
         if ((horizontal == 0) && (vertiacl == 0))
         {
             WheelSmokeOn();
+        }
+
+        if ((horizontal != 0) || (vertiacl != 0))
+        {
+            audioSource.volume += Time.fixedDeltaTime / 5f;
+            audioSource.volume = Mathf.Min(audioSource.volume, 0.2f);
+        }
+        else
+        {
+            audioSource.volume -= Time.fixedDeltaTime / 5f;
+            audioSource.volume = Mathf.Max(audioSource.volume, 0.1f);
         }
     }
 
