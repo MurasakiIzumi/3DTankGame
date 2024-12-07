@@ -20,7 +20,5 @@ public class StateCameraControl : MonoBehaviour
     {
         Vector3 targetPos = new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z);
         transform.position = targetPos;
-
-        Vector3.
     }
 }

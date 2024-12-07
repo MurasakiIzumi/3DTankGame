@@ -10,6 +10,15 @@ TagManager:
   - SubCamera
   - CameraSystem
   - TargetPoint
+  - PLHeadCollsion
+  - PLFowCollision
+  - PLBackCollision
+  - PLRightCollision
+  - PLLeftCollision
+  - NPCHeadCollision
+  - NPCFowCollision
+  - NPCRightCollision
+  - NPCLeftCollision
   layers:
   - Default
   - TransparentFX
