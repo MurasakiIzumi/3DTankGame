@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3589574790655614937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet Create Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1607224083592124276}
   - component: {fileID: 7324912892713786425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RotateableHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,6 +61,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 559251928788949304}
   - {fileID: 6082673072061923344}
   - {fileID: 4292763102755808595}
   - {fileID: 1326240675016451162}
@@ -97,7 +98,7 @@ GameObject:
   - component: {fileID: 5538038979793398240}
   - component: {fileID: 1649110084893044065}
   - component: {fileID: 1285741678143828429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sub Camera
   m_TagString: SubCamera
   m_Icon: {fileID: 0}
@@ -190,7 +191,7 @@ GameObject:
   - component: {fileID: 2652758537370991059}
   - component: {fileID: 4208030541151241702}
   - component: {fileID: 5677178535104427175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +296,7 @@ GameObject:
   - component: {fileID: 187723302849023526}
   - component: {fileID: 3381442633402956613}
   - component: {fileID: 395740839525735045}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +403,7 @@ GameObject:
   - component: {fileID: 2191037198581131426}
   - component: {fileID: 5203607751517285564}
   - component: {fileID: 4943451113760458705}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +508,7 @@ GameObject:
   - component: {fileID: 3263211367189903125}
   - component: {fileID: 6260379254974812700}
   - component: {fileID: 1466493190198242312}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +612,7 @@ GameObject:
   - component: {fileID: 3447871798154483658}
   - component: {fileID: 6143544131876988717}
   - component: {fileID: 8008344741452610229}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +696,7 @@ GameObject:
   - component: {fileID: 6686847843522025451}
   - component: {fileID: 239252021885939986}
   - component: {fileID: 9194200585421718639}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6082673072061923344}
   - component: {fileID: 6721854625056185856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +857,7 @@ GameObject:
   - component: {fileID: 6417897137392929658}
   - component: {fileID: 8849798880969716448}
   - component: {fileID: 8578398318333723857}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,7 +962,7 @@ GameObject:
   - component: {fileID: 2790888426224720104}
   - component: {fileID: 7452163062075265785}
   - component: {fileID: 2656324946239552989}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1068,7 +1069,7 @@ GameObject:
   - component: {fileID: 4907462285454947625}
   - component: {fileID: 1014652140007871191}
   - component: {fileID: 5025308562822765664}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1174,7 @@ GameObject:
   - component: {fileID: 347762702421562079}
   - component: {fileID: 1962958883216562591}
   - component: {fileID: 2782071425984493662}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,7 +1279,7 @@ GameObject:
   - component: {fileID: 8451930274884529207}
   - component: {fileID: 5767727446546769135}
   - component: {fileID: 7177261771844383966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1383,7 +1384,7 @@ GameObject:
   - component: {fileID: 7271317282079628427}
   - component: {fileID: 8170595797733711428}
   - component: {fileID: 4339387088446061848}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1488,7 +1489,7 @@ GameObject:
   - component: {fileID: 3510644870206608893}
   - component: {fileID: 8480603542337940603}
   - component: {fileID: 2825385604284152218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1592,7 +1593,7 @@ GameObject:
   - component: {fileID: 1326240675016451162}
   - component: {fileID: 2563262909634441289}
   - component: {fileID: 3962220928332854528}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1676,7 +1677,7 @@ GameObject:
   - component: {fileID: 6747414775976640064}
   - component: {fileID: 3576694164325677266}
   - component: {fileID: 3329515535199786501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WheelR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1781,7 +1782,7 @@ GameObject:
   - component: {fileID: 5213222177459183266}
   - component: {fileID: 8044334359868833254}
   - component: {fileID: 5045472314207422906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1865,7 +1866,7 @@ GameObject:
   - component: {fileID: 5079559391052124419}
   - component: {fileID: 6167162542709518336}
   - component: {fileID: 7043892030670637577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1970,7 +1971,7 @@ GameObject:
   - component: {fileID: 8808737498249723219}
   - component: {fileID: 5963574392780368678}
   - component: {fileID: 6095967746450323835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2076,7 @@ GameObject:
   - component: {fileID: 3004904880106414373}
   - component: {fileID: 7963369335895231805}
   - component: {fileID: 1461465486581185848}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2180,7 +2181,7 @@ GameObject:
   - component: {fileID: 618216519211449091}
   - component: {fileID: 4780830165718219454}
   - component: {fileID: 3869043718282188141}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Panzer Mk1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2343,6 +2344,89 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &9066105959712014060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559251928788949304}
+  - component: {fileID: 8968589852549012808}
+  m_Layer: 0
+  m_Name: State Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &559251928788949304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066105959712014060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1607224083592124276}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!20 &8968589852549012808
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066105959712014060}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 65
+  orthographic: 1
+  orthographic size: 4
+  m_Depth: 99
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 64
+  m_RenderingPath: 0
+  m_TargetTexture: {fileID: 8400000, guid: 85d38a58996ffbd48a80960f68dbdeca, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &9099764093429308151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,7 +2436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6319751977953813714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MoveableBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2396,7 +2480,7 @@ GameObject:
   - component: {fileID: 4940414131264756398}
   - component: {fileID: 3374588494731248293}
   - component: {fileID: 8080644781835541853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WheelL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
