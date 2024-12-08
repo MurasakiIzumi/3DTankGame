@@ -4,21 +4,32 @@ using UnityEngine;
 
 public class StateCameraControl : MonoBehaviour
 {
-    private GameObject Target;
+    [SerializeField] GameObject posTarget;
+    [SerializeField] GameObject rotateTarget;
 
+    private Quaternion deflutRotation;
     void Start()
     {
-        Target = GameObject.FindWithTag("StateCenter");
+        deflutRotation = transform.rotation;
     }
 
     void FixedUpdate()
     {
-        FollowTarget();
+        FollowTargetPos();
+        FollowTargetRotate();
     }
 
-    private void FollowTarget()
+    private void FollowTargetPos()
     {
-        Vector3 targetPos = new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z);
+        Vector3 targetPos = posTarget.transform.position;
+        targetPos.y = transform.position.y;
         transform.position = targetPos;
+    }
+
+    private void FollowTargetRotate()
+    {
+        Vector3 targetRotate = new Vector3(90f, 0f, -rotateTarget.transform.localEulerAngles.y);
+        transform.localEulerAngles = targetRotate;
+
     }
 }
