@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 3
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2
-    agentSlope: 45
-    agentClimb: 0.4
+    agentRadius: 4.5
+    agentHeight: 2.9
+    agentSlope: 14
+    agentClimb: 1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 1.5
     manualTileSize: 0
     tileSize: 256
     buildHeightMesh: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ebdfd1b16db1da249a107a2a6871926c, type: 2}
 --- !u!1 &97097937
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +694,63 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &618739792
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 29933594932863721, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_Name
+      value: Panzer Mk2(npc)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7771459
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.62932044
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291233080877813864, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,3 +1749,4 @@ SceneRoots:
   - {fileID: 1723818344}
   - {fileID: 110921306}
   - {fileID: 1567532630}
+  - {fileID: 618739792}
