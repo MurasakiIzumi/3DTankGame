@@ -19,6 +19,7 @@ TagManager:
   - NPCRightCollision
   - NPCLeftCollision
   - PLHeadCollision
+  - Sight
   layers:
   - Default
   - TransparentFX
