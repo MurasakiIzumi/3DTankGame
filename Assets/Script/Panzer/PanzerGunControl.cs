@@ -16,6 +16,8 @@ public class PanzerGunControl : MonoBehaviour
     [SerializeField] AudioClip relordSE;
     [SerializeField] AudioClip noammoSE;
 
+    [SerializeField] float shotSpread;
+
     [SerializeField] float coolTime;
     [SerializeField] float relordTime;
     [SerializeField] int ammoMax;
@@ -177,8 +179,15 @@ public class PanzerGunControl : MonoBehaviour
     private void SetBullet()
     {
         sparkPos = CreatePoint.transform.position + CreatePoint.transform.forward * 0.2f;
-        Instantiate(Bullet, CreatePoint.transform.position, transform.rotation);
+        Instantiate(Bullet, CreatePoint.transform.position, Quaternion.LookRotation(BulletSpread()));
         Instantiate(GunSpark, sparkPos, transform.rotation);
+    }
+
+    private Vector3 BulletSpread()
+    {
+        float spreadAngleRatio = shotSpread / 180f;
+        Vector3 spreadDirection = Vector3.Slerp(CreatePoint.forward, Random.insideUnitSphere, spreadAngleRatio);
+        return spreadDirection;
     }
 
     private void AmmoUIUpdate()
