@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PanzerGunControl : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PanzerGunControl : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI NowAmmoUI;
     [SerializeField] TextMeshProUGUI AllAmmoUI;
+    [SerializeField] GameObject Sight;
 
     [SerializeField] AudioClip relordSE;
     [SerializeField] AudioClip noammoSE;
@@ -35,6 +37,7 @@ public class PanzerGunControl : MonoBehaviour
     private bool noAmmo;
 
     private AudioSource audioSource;
+    private Animator animator;
 
     void Start()
     {
@@ -51,6 +54,8 @@ public class PanzerGunControl : MonoBehaviour
 
         audioSource=GetComponent<AudioSource>();
         audioSource.clip = relordSE;
+
+        animator = Sight.GetComponent<Animator>();
     }
 
     void Update()
@@ -118,14 +123,19 @@ public class PanzerGunControl : MonoBehaviour
         nowAmmo--;
         AmmoUIUpdate();
 
+        animator.Play("Sight", -1, (1f - (float)nowAmmo / ammoOnce));
+
         if (nowAmmo <= 0)
         {
-            reLording = true;
-
             if (allAmmo <= 0)
             {
                 reLording = false;
                 noAmmo = true;
+            }
+            else
+            {
+                reLording = true;
+                animator.Play("Relord", -1, 0f);
             }
         }
     }

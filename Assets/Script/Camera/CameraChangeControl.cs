@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraChangeControl : MonoBehaviour
 {
     private GameObject mainCamera;
     private GameObject subCamera;
+    private GameObject sight;
 
     private bool isZoom;
     private Camera main;
@@ -11,10 +13,13 @@ public class CameraChangeControl : MonoBehaviour
     private AudioListener mainLister;
     private AudioListener subLister;
 
+    private Image sightImage;
+
     void Start()
     {
         mainCamera = GameObject.FindWithTag("MainCamera");
         subCamera = GameObject.FindWithTag("SubCamera");
+        sight = GameObject.FindWithTag("Sight");
 
         isZoom = false;
         main=mainCamera.GetComponent<Camera>();
@@ -22,10 +27,13 @@ public class CameraChangeControl : MonoBehaviour
         mainLister=mainCamera.GetComponent<AudioListener>();
         subLister=subCamera.GetComponent<AudioListener>();
 
+        sightImage=sight.GetComponent<Image>();
+
         main.depth = 1;
         mainLister.enabled = true;
         sub.depth = -1;
         subLister.enabled = false;
+        sightImage.enabled = false;
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -49,6 +57,7 @@ public class CameraChangeControl : MonoBehaviour
             sub.depth = 1;
             subLister.enabled = true;
             isZoom = true;
+            sightImage.enabled = true;
         }
         else
         {
@@ -57,6 +66,7 @@ public class CameraChangeControl : MonoBehaviour
             sub.depth = -1;
             subLister.enabled = false;
             isZoom = false;
+            sightImage.enabled = false;
         }
     }
 

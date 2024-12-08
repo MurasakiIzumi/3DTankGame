@@ -1194,7 +1194,15 @@ MonoBehaviour:
   Bullet: {fileID: 3916639827746127666, guid: b9f2de6afecdf2146b6bf938ebb4807c, type: 3}
   GunSpark: {fileID: 938860635534822922, guid: 6959532deaf15b743bafa0f3e0fcf259, type: 3}
   Gun: {fileID: 6707158752066248390}
+  NowAmmoUI: {fileID: 0}
+  AllAmmoUI: {fileID: 0}
+  relordSE: {fileID: 0}
+  noammoSE: {fileID: 0}
+  shotSpread: 0
   coolTime: 0.15
+  relordTime: 0
+  ammoMax: 0
+  ammoOnce: 0
 --- !u!1 &3218282301613934697
 GameObject:
   m_ObjectHideFlags: 0
