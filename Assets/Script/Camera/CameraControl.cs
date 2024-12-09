@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraControl : MonoBehaviour
 {
@@ -34,10 +35,21 @@ public class CameraControl : MonoBehaviour
     void Update()
     {
         isZoom = cameraChange.GetisZoom();
+
+        if (!Target)
+        {
+            Target = null;
+            StartCoroutine("Restart", 5);
+        }
     }
 
     void FixedUpdate()
     {
+        if (!Target)
+        {
+            return;
+        }
+
         if (isMainCamera)
         {
             CameraRotate();
@@ -77,5 +89,12 @@ public class CameraControl : MonoBehaviour
                 transform.RotateAround(Target.transform.position, Vector3.up, MouseX * rotateSpeed);
             }
         }
+    }
+
+    IEnumerator Restart(int Sce)
+    {
+        yield return new WaitForSecondsRealtime(Sce);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -7,10 +7,12 @@ public class StateCameraControl : MonoBehaviour
     [SerializeField] GameObject posTarget;
     [SerializeField] GameObject rotateTarget;
 
-    private Quaternion deflutRotation;
-    void Start()
+    void Update()
     {
-        deflutRotation = transform.rotation;
+        if (!posTarget)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate()

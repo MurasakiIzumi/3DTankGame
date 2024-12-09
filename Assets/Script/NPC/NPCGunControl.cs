@@ -36,6 +36,11 @@ public class NPCGunControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!player)
+        {
+            return;
+        }
+
         SearchAndFollow();
     }
 
@@ -63,6 +68,11 @@ public class NPCGunControl : MonoBehaviour
         Shot();
         Animation();
         Timer();
+
+        if (!player)
+        {
+            player = null;
+        }
     }
 
     private void Timer()
