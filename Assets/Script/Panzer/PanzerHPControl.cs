@@ -26,6 +26,8 @@ public class PanzerHPControl : MonoBehaviour
     [SerializeField] int leftHP;
     [SerializeField] int coreHP;
 
+    [SerializeField] GameObject explosion;
+
     void Start()
     {
         
@@ -150,6 +152,7 @@ public class PanzerHPControl : MonoBehaviour
 
         if(coreHP <= 0)
         {
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -155,7 +155,7 @@ MonoBehaviour:
   rangeTime: 1.5
   missSpark1: {fileID: 1963387136426011568, guid: 903eee204a3a2e849a301693e556a684, type: 3}
   missSpark2: {fileID: 1963387136426011568, guid: d6e22aebe15eee6479e6c3a5b6155cc1, type: 3}
-  hitSpark: {fileID: 1963387136426011568, guid: 6001ac1e312cdef4bb1d22660cbe6681, type: 3}
+  hitSpark: {fileID: 1963387136426011568, guid: 9bbf55ee58647af40bc40843aa203b80, type: 3}
 --- !u!1 &4287049739688741765
 GameObject:
   m_ObjectHideFlags: 0

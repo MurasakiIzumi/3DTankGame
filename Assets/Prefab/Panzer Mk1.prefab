@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 6459021950280951287}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLBackCollision
+  m_TagString: Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 3139175289179142329}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLLeftCollision
+  m_TagString: Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1316,7 +1316,7 @@ GameObject:
   - component: {fileID: 8301970510498841345}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLBackCollision
+  m_TagString: Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1600,7 +1600,7 @@ GameObject:
   - component: {fileID: 7840770260282121906}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLRightCollision
+  m_TagString: Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1718,7 +1718,7 @@ GameObject:
   - component: {fileID: 34700699421437110}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLHeadCollision
+  m_TagString: Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1836,7 +1836,7 @@ GameObject:
   - component: {fileID: 2419895269489992026}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLHeadCollision
+  m_TagString: Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2037,7 +2037,7 @@ GameObject:
   - component: {fileID: 1239556622134868551}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLHeadCollision
+  m_TagString: Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2878,7 +2878,7 @@ GameObject:
   - component: {fileID: 5274398055628745338}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: PLFowCollision
+  m_TagString: Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3494,6 +3494,7 @@ MonoBehaviour:
   rightHP: 3
   leftHP: 3
   coreHP: 3
+  explosion: {fileID: 1963387136426011568, guid: 6001ac1e312cdef4bb1d22660cbe6681, type: 3}
 --- !u!82 &3869043718282188141
 AudioSource:
   m_ObjectHideFlags: 0

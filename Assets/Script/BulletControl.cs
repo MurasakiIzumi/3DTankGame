@@ -86,5 +86,18 @@ public class BulletControl : MonoBehaviour
                 MissTarget();
             }
         }
+
+        if (collision.gameObject.tag == "NPC")
+        {
+            if (Random.Range(1, 101) > 50)
+            {
+                collision.collider.gameObject.GetComponent<NPCCollision>().GetDamage(1);
+                HitTarget();
+            }
+            else
+            {
+                MissTarget();
+            }
+        }
     }
 }

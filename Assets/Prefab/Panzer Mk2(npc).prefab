@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8291233080877813864}
   - component: {fileID: 888265838096409207}
   - component: {fileID: 4537722518526660790}
+  - component: {fileID: 6938162480731371667}
   m_Layer: 0
   m_Name: Panzer Mk2(npc)
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,6 +75,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475c07d7f1e5fd3469ffe11f65ea5fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6938162480731371667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29933594932863721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c992c80482b65e44bbcf3fca9fc7afa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headHP: 2
+  forwardHP: 2
+  backHP: 2
+  rightHP: 2
+  leftHP: 2
+  coreHP: 2
+  explosion: {fileID: 1963387136426011568, guid: 6001ac1e312cdef4bb1d22660cbe6681, type: 3}
 --- !u!1 &437528297220351068
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,9 +106,10 @@ GameObject:
   - component: {fileID: 1728566786935352882}
   - component: {fileID: 3238838523362021457}
   - component: {fileID: 7676542852934818832}
+  - component: {fileID: 4117228332640241584}
   m_Layer: 0
   m_Name: BodyFoward
-  m_TagString: Untagged
+  m_TagString: NPCFowCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +200,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4117228332640241584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437528297220351068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1064642162326292415
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,9 +224,10 @@ GameObject:
   - component: {fileID: 4307061168925087912}
   - component: {fileID: 1061702594411488975}
   - component: {fileID: 8708665896488787733}
+  - component: {fileID: 5699166343928443363}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCRightCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,6 +318,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5699166343928443363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064642162326292415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1252825982473104672
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,9 +342,10 @@ GameObject:
   - component: {fileID: 1927875211948558175}
   - component: {fileID: 4247524972042164417}
   - component: {fileID: 4502682971987805601}
+  - component: {fileID: 2098546210065694850}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: NPCHeadCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,6 +438,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &2098546210065694850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252825982473104672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1983644101014271587
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,9 +462,10 @@ GameObject:
   - component: {fileID: 5359689925216908438}
   - component: {fileID: 3139482147062652636}
   - component: {fileID: 5437458599235373493}
+  - component: {fileID: 2448716244304274600}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCLeftCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,6 +556,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2448716244304274600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983644101014271587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2502339416217450102
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,9 +663,10 @@ GameObject:
   - component: {fileID: 204724246221252564}
   - component: {fileID: 1024379252577591792}
   - component: {fileID: 133171647617501888}
+  - component: {fileID: 7082724885243767780}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCLeftCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -684,6 +757,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7082724885243767780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744131952951740440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3010666429217680920
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,9 +781,10 @@ GameObject:
   - component: {fileID: 1191324242515445105}
   - component: {fileID: 5214300959928393898}
   - component: {fileID: 7431390130282861099}
+  - component: {fileID: 4248311987142428247}
   m_Layer: 0
   m_Name: BodyBack
-  m_TagString: Untagged
+  m_TagString: NPCBackCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -789,6 +875,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4248311987142428247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010666429217680920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3381507969054751926
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,9 +930,10 @@ GameObject:
   - component: {fileID: 1738513284701044347}
   - component: {fileID: 123999287926360840}
   - component: {fileID: 2197659550625122021}
+  - component: {fileID: 4241227833338846090}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCLeftCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,6 +1024,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4241227833338846090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397139316282202609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3840423846376477902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,9 +1120,10 @@ GameObject:
   - component: {fileID: 8105903765821391417}
   - component: {fileID: 2725808186860654962}
   - component: {fileID: 29369935445218610}
+  - component: {fileID: 2261695333559208042}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCHeadCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1104,6 +1216,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &2261695333559208042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4323536645394038188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4561039097575869969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,9 +1323,10 @@ GameObject:
   - component: {fileID: 4698528352801170042}
   - component: {fileID: 2241404389013512052}
   - component: {fileID: 8125174129753052610}
+  - component: {fileID: 2183712975328581338}
   m_Layer: 0
   m_Name: BodyBack
-  m_TagString: Untagged
+  m_TagString: NPCBackCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1292,6 +1417,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2183712975328581338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5018849019291058922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5994427595140315170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,9 +1524,10 @@ GameObject:
   - component: {fileID: 3054648145749258139}
   - component: {fileID: 5387789499508835958}
   - component: {fileID: 176717086227429602}
+  - component: {fileID: 9011829670210118285}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCRightCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1480,6 +1618,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9011829670210118285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6174532512462409597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6505729432552823915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,9 +1642,10 @@ GameObject:
   - component: {fileID: 2589760376822055750}
   - component: {fileID: 1985192263938707206}
   - component: {fileID: 3483273285721043366}
+  - component: {fileID: 6612195476997425791}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCRightCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1585,6 +1736,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6612195476997425791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505729432552823915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6519804744699060225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,9 +1760,10 @@ GameObject:
   - component: {fileID: 3939071862140726145}
   - component: {fileID: 4903948900182459058}
   - component: {fileID: 388188911396029068}
+  - component: {fileID: 2842746363509362659}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCLeftCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1690,6 +1854,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2842746363509362659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6519804744699060225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6844809592374071657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,9 +1878,10 @@ GameObject:
   - component: {fileID: 1812858962793948170}
   - component: {fileID: 5290922421155389942}
   - component: {fileID: 784812584063796353}
+  - component: {fileID: 3172798421655248721}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: Untagged
+  m_TagString: NPCRightCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1795,6 +1972,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3172798421655248721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844809592374071657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7634082695862538151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,9 +2074,9 @@ MonoBehaviour:
   GunSpark: {fileID: 938860635534822922, guid: eb4032a0706be1f4288b45bb605dfa23, type: 3}
   Gun: {fileID: 2502339416217450102}
   fowardPos: {fileID: 5467327285754819721}
-  shotSpread: 2
-  coolTime: 2
-  searchDis: 15
+  shotSpread: 3
+  coolTime: 5
+  searchDis: 50
   rotateSpeed: 1.25
 --- !u!1 &8631590334490015870
 GameObject:
@@ -1901,9 +2090,10 @@ GameObject:
   - component: {fileID: 779125229174206568}
   - component: {fileID: 559072728794549859}
   - component: {fileID: 4692934879263536468}
+  - component: {fileID: 6143257557211629674}
   m_Layer: 0
   m_Name: BodyFoward
-  m_TagString: Untagged
+  m_TagString: NPCFowCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1994,3 +2184,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6143257557211629674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631590334490015870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fedd400aa9d4e48b9407e0bbf70f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
