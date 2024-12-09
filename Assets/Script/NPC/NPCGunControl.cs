@@ -72,6 +72,7 @@ public class NPCGunControl : MonoBehaviour
         if (!player)
         {
             player = null;
+            isTargeting = false;
         }
     }
 

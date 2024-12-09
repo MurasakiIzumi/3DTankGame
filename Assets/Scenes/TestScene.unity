@@ -1404,6 +1404,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6308941596474890534, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
+      propertyPath: WarningSE1
+      value: 
+      objectReference: {fileID: 8300000, guid: cf68e344c4d6ee942beec25b80be0c0c, type: 3}
+    - target: {fileID: 6308941596474890534, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
+      propertyPath: WarningSE2
+      value: 
+      objectReference: {fileID: 8300000, guid: afa738d605c3c6b4e8b396aa767723fd, type: 3}
     - target: {fileID: 6721854625056185856, guid: 38dbe8112c69a6844bc73d11c7997d86, type: 3}
       propertyPath: Sight
       value: 

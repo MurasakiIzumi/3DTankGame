@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -4417637029937316425}
   - component: {fileID: -740006011413718670}
   m_Layer: 0
-  m_Name: MissSparks(SE)
+  m_Name: MissSparks(Hit)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

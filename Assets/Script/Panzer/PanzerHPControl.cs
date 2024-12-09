@@ -27,10 +27,14 @@ public class PanzerHPControl : MonoBehaviour
     [SerializeField] int coreHP;
 
     [SerializeField] GameObject explosion;
+    [SerializeField] AudioClip WarningSE1;
+    [SerializeField] AudioClip WarningSE2;
+
+    private AudioSource audioSource;
 
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -149,6 +153,15 @@ public class PanzerHPControl : MonoBehaviour
     private void CoreGetDamage()
     {
         coreHP--;
+
+        if (coreHP == 1)
+        {
+            audioSource.PlayOneShot(WarningSE2, 0.5f);
+        }
+        else
+        {
+            audioSource.PlayOneShot(WarningSE1, 0.5f);
+        }
 
         if(coreHP <= 0)
         {
