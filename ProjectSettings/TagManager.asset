@@ -20,6 +20,7 @@ TagManager:
   - NPCLeftCollision
   - PLHeadCollision
   - Sight
+  - Armour
   layers:
   - Default
   - TransparentFX

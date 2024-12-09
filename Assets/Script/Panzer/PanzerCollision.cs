@@ -5,7 +5,6 @@ using UnityEngine;
 public class PanzerCollision : MonoBehaviour
 {
     private PanzerHPControl hpControl;
-
     void Start()
     {
         hpControl = GameObject.FindWithTag("Player").GetComponent<PanzerHPControl>();    
@@ -21,17 +20,21 @@ public class PanzerCollision : MonoBehaviour
         {
             hpControl.ForwardGetDamage(damage);
         }
-        else if(gameObject.tag == ("PLBackCollision"))
+        else if (gameObject.tag == ("PLBackCollision"))
         {
             hpControl.BackGetDamage(damage);
         }
-        else if(gameObject.tag == ("PLRightCollision"))
+        else if (gameObject.tag == ("PLRightCollision"))
         {
             hpControl.RightGetDamage(damage);
         }
-        else if(gameObject.tag == ("PLLeftCollision"))
+        else if (gameObject.tag == ("PLLeftCollision"))
         {
             hpControl.LeftGetDamage(damage);
+        }
+        else if (gameObject.tag == ("Armour"))
+        {
+            Destroy(gameObject);
         }
     }
 

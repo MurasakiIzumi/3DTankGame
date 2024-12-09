@@ -8,7 +8,9 @@ public class BulletControl : MonoBehaviour
     [SerializeField] float dropSpeed;
     [SerializeField] int Damage;
     [Header("—Ž‰ºŠJŽnŽžŠÔ")][SerializeField] float rangeTime;
-    [Header("–½’†")][SerializeField] GameObject Spark;
+    [Header("ŠO‚ê")][SerializeField] GameObject missSpark1;
+                    [SerializeField] GameObject missSpark2;
+    [Header("–½’†")][SerializeField] GameObject hitSpark;
 
     private float timer_range;
 
@@ -40,11 +42,23 @@ public class BulletControl : MonoBehaviour
 
     private void HitGround()
     {
-        Instantiate(Spark, transform.position, Quaternion.identity);
+        Instantiate(missSpark1, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
     private void HitWall()
     {
+        Destroy(gameObject);
+    }
+
+    private void HitTarget()
+    {
+        Instantiate(hitSpark, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    private void MissTarget()
+    {
+        Instantiate(missSpark2, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
@@ -60,5 +74,17 @@ public class BulletControl : MonoBehaviour
             HitWall();
         }
 
+        if (collision.gameObject.tag == "Player")
+        {
+            if (Random.Range(1, 101) > 60)
+            {
+                collision.collider.gameObject.GetComponent<PanzerCollision>().GetDamage(1);
+                HitTarget();
+            }
+            else
+            {
+                MissTarget();
+            }
+        }
     }
 }

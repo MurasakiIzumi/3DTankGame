@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1539811926078600147}
   - component: {fileID: 6354432197170543972}
   m_Layer: 0
-  m_Name: TestSparks3D
+  m_Name: MissSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

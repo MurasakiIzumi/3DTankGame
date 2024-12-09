@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8291233080877813864}
   - component: {fileID: 888265838096409207}
-  - component: {fileID: 1965242543152405887}
+  - component: {fileID: 4537722518526660790}
   m_Layer: 0
   m_Name: Panzer Mk2(npc)
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9102216395810242020}
   - {fileID: 1423484443347726716}
+  - {fileID: 9102216395810242020}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &888265838096409207
@@ -62,28 +62,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!195 &1965242543152405887
-NavMeshAgent:
+--- !u!114 &4537722518526660790
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29933594932863721}
   m_Enabled: 1
-  m_AgentTypeID: -334000983
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475c07d7f1e5fd3469ffe11f65ea5fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &437528297220351068
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +789,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3381507969054751926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284717709789635287}
+  m_Layer: 0
+  m_Name: Bullet Create Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &284717709789635287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381507969054751926}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 1.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1423484443347726716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3397139316282202609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423484443347726716}
+  - component: {fileID: 8577228873087014233}
   m_Layer: 0
   m_Name: RotateableHead
   m_TagString: Untagged
@@ -1840,11 +1862,33 @@ Transform:
   m_Children:
   - {fileID: 8662444884664349457}
   - {fileID: 3480204535247668656}
+  - {fileID: 284717709789635287}
   - {fileID: 1016560300852360151}
   - {fileID: 3437387560336918068}
   - {fileID: 2053941610958199251}
   m_Father: {fileID: 8291233080877813864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8577228873087014233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212795265831172155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cb511df73b8d7459c355d65af03886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreatePoint: {fileID: 284717709789635287}
+  Bullet: {fileID: 3916639827746127666, guid: 6996e132374a91048873e851466d2a27, type: 3}
+  GunSpark: {fileID: 938860635534822922, guid: eb4032a0706be1f4288b45bb605dfa23, type: 3}
+  Gun: {fileID: 2502339416217450102}
+  fowardPos: {fileID: 5467327285754819721}
+  shotSpread: 2
+  coolTime: 2
+  searchDis: 15
+  rotateSpeed: 1.25
 --- !u!1 &8631590334490015870
 GameObject:
   m_ObjectHideFlags: 0
