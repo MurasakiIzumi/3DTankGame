@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4537722518526660790}
   - component: {fileID: 6938162480731371667}
   m_Layer: 0
-  m_Name: Panzer Mk2(npc)
+  m_Name: FT-17(npc)
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
