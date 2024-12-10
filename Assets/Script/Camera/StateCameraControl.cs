@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class StateCameraControl : MonoBehaviour
 {
-    [SerializeField] GameObject posTarget;
-    [SerializeField] GameObject rotateTarget;
+    private GameObject posTarget;
+    private GameObject rotateTarget;
 
+    void Start()
+    {
+        posTarget = GameObject.FindWithTag("Player");
+        rotateTarget = GameObject.FindWithTag("PlayerHead");
+    }
     void Update()
     {
         if (!posTarget)

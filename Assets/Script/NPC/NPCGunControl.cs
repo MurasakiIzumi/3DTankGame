@@ -96,15 +96,15 @@ public class NPCGunControl : MonoBehaviour
 
     private void Animation()
     {
-        if (timer_cooltime >= coolTime / 16) 
+        if (timer_cooltime >= coolTime / 8) 
         {
             Gun.transform.localPosition = defultPos;
         }
-        else if (timer_cooltime > coolTime / 32)
+        else if (timer_cooltime > coolTime / 16)
         {
             Gun.transform.localPosition += Vector3.forward * animationSpeed * Time.deltaTime;
         }
-        else if (timer_cooltime < coolTime / 32)
+        else if (timer_cooltime < coolTime / 16)
         {
             Gun.transform.localPosition += Vector3.back * animationSpeed * Time.deltaTime;
         }

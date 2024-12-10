@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 7324912892713786425}
   m_Layer: 0
   m_Name: RotateableHead
-  m_TagString: Untagged
+  m_TagString: PlayerHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 442996222942594705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0.35000002}
+  m_LocalPosition: {x: 0.325, y: 0, z: 0.35000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 8401055269513556361}
   - component: {fileID: 187723302849023526}
   - component: {fileID: 3381442633402956613}
-  - component: {fileID: 395740839525735045}
+  - component: {fileID: 1136161279002039308}
   - component: {fileID: 8212533460314392702}
   m_Layer: 0
   m_Name: Parts
@@ -466,8 +466,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &395740839525735045
-CapsuleCollider:
+--- !u!64 &1136161279002039308
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -484,11 +484,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &8212533460314392702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,7 +1301,7 @@ GameObject:
   - component: {fileID: 6658147581232958217}
   - component: {fileID: 6686847843522025451}
   - component: {fileID: 239252021885939986}
-  - component: {fileID: 9194200585421718639}
+  - component: {fileID: 4701077573432695604}
   - component: {fileID: 1161604122184378403}
   m_Layer: 0
   m_Name: Parts
@@ -1376,8 +1375,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &9194200585421718639
-CapsuleCollider:
+--- !u!64 &4701077573432695604
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1394,11 +1393,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1161604122184378403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,13 +1463,10 @@ MonoBehaviour:
   Bullet: {fileID: 3916639827746127666, guid: b9f2de6afecdf2146b6bf938ebb4807c, type: 3}
   GunSpark: {fileID: 938860635534822922, guid: 6959532deaf15b743bafa0f3e0fcf259, type: 3}
   Gun: {fileID: 6707158752066248390}
-  NowAmmoUI: {fileID: 0}
-  AllAmmoUI: {fileID: 0}
-  Sight: {fileID: 0}
   relordSE: {fileID: 8300000, guid: 9c86b8d5fa6855e43a2fa0b633a1237d, type: 3}
   noammoSE: {fileID: 8300000, guid: cacd9d9d9bc42df4d9bc31431459b6ea, type: 3}
   shotSpread: 2
-  coolTime: 0.15
+  coolTime: 0.25
   relordTime: 1
   ammoMax: 60
   ammoOnce: 12
@@ -1799,7 +1794,7 @@ Transform:
   m_GameObject: {fileID: 3474435190018037827}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.085, z: 0.39999998}
+  m_LocalPosition: {x: 0, y: 0.1125, z: 0.39999998}
   m_LocalScale: {x: 0.075, y: 0.75, z: 0.075}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2438,7 +2433,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.1, z: -1.5}
-  m_LocalScale: {x: 0.2, y: 1.2, z: 0.20000003}
+  m_LocalScale: {x: 0.15, y: 1.2, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1607224083592124276}
@@ -3087,7 +3082,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 1.1}
-  m_LocalScale: {x: 0.1, y: 1.2, z: 0.10000001}
+  m_LocalScale: {x: 0.15, y: 1.2, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6082673072061923344}

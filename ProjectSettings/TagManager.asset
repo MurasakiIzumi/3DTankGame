@@ -23,6 +23,9 @@ TagManager:
   - Armour
   - NPCBackCollision
   - NPC
+  - NowAmmo
+  - AllAmmo
+  - PlayerHead
   layers:
   - Default
   - TransparentFX

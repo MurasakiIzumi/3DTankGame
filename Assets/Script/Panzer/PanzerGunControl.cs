@@ -11,10 +11,6 @@ public class PanzerGunControl : MonoBehaviour
     [SerializeField] GameObject GunSpark;
     [SerializeField] GameObject Gun;
 
-    [SerializeField] TextMeshProUGUI NowAmmoUI;
-    [SerializeField] TextMeshProUGUI AllAmmoUI;
-    [SerializeField] GameObject Sight;
-
     [SerializeField] AudioClip relordSE;
     [SerializeField] AudioClip noammoSE;
 
@@ -38,6 +34,8 @@ public class PanzerGunControl : MonoBehaviour
 
     private AudioSource audioSource;
     private Animator animator;
+    private TextMeshProUGUI NowAmmoUI;
+    private TextMeshProUGUI AllAmmoUI;
 
     void Start()
     {
@@ -46,16 +44,18 @@ public class PanzerGunControl : MonoBehaviour
         defultPos =Gun.transform.localPosition;
         animationSpeed = 4f;
 
+        audioSource =GetComponent<AudioSource>();
+        audioSource.clip = relordSE;
+
+        NowAmmoUI = GameObject.FindWithTag("NowAmmo").GetComponent<TextMeshProUGUI>();
+        AllAmmoUI = GameObject.FindWithTag("AllAmmo").GetComponent<TextMeshProUGUI>();
+        animator = GameObject.FindWithTag("Sight").GetComponent<Animator>();
+
         allAmmo = ammoMax;
         nowAmmo = ammoOnce;
         reLording = false;
         noAmmo = false;
         AmmoUIUpdate();
-
-        audioSource=GetComponent<AudioSource>();
-        audioSource.clip = relordSE;
-
-        animator = Sight.GetComponent<Animator>();
     }
 
     void Update()
@@ -224,7 +224,7 @@ public class PanzerGunControl : MonoBehaviour
             AllAmmoUI.color = Color.black;
         }
 
-        NowAmmoUI.text = nowAmmo.ToString();
+        NowAmmoUI.text = nowAmmo + "/" + ammoOnce;
         AllAmmoUI.text = allAmmo.ToString();
     }
 }

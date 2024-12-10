@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9114002496654136603}
   - component: {fileID: 1036111582654634383}
   m_Layer: 0
-  m_Name: 12.7mm
+  m_Name: 40mm
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
