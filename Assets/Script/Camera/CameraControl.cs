@@ -20,23 +20,23 @@ public class CameraControl : MonoBehaviour
 
     void Start()
     {
+        cameraSystem = GameObject.FindWithTag("CameraSystem");
+
+        if (gameObject.tag == "2ndMainCamera")
+        {
+            main2CameraPoint = GameObject.FindWithTag("2ndMainCameraPoint");
+        }
+
+        player = GameObject.FindWithTag("Player");
+        rotateSpeed = player.GetComponent<PanzerMoveControl>().GetRotateSpeed();
+
         if (isMainCamera)
         {
-            cameraSystem = GameObject.FindWithTag("CameraSystem");
-
-            if (gameObject.tag == "2ndMainCamera")
-            {
-                main2CameraPoint = GameObject.FindWithTag("2ndMainCameraPoint");
-            }
-
             distance = transform.position - cameraSystem.transform.position;
             isZoom = false;
         }
         else
         {
-            player = GameObject.FindWithTag("Player");
-            rotateSpeed = player.GetComponent<PanzerMoveControl>().GetRotateSpeed();
-
             distance = transform.position - player.transform.position;
         }
 
@@ -111,11 +111,7 @@ public class CameraControl : MonoBehaviour
         if (isZoom)
         {
             MouseX= Input.GetAxis("Horizontal");
-
-            if (Mathf.Abs(MouseX) > 0.001f)
-            {
-                transform.RotateAround(cameraSystem.transform.position, Vector3.up, MouseX * rotateSpeed);
-            }
+            transform.RotateAround(cameraSystem.transform.position, Vector3.up, MouseX * rotateSpeed);
         }
     }
 

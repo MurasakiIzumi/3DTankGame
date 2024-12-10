@@ -9,6 +9,7 @@ public class NPCGunControl : MonoBehaviour
     [SerializeField] GameObject GunSpark;
     [SerializeField] GameObject Gun;
     [SerializeField] Transform fowardPos;
+    [SerializeField] GameObject searchArea;
 
     [SerializeField] float shotSpread;
     [SerializeField] float coolTime;
@@ -20,40 +21,40 @@ public class NPCGunControl : MonoBehaviour
     private Vector3 defultPos;
     private Vector3 defultFoward;
     private Vector3 sparkPos;
-    private Vector3 target;
+    private Vector3 attackTarget;
     private bool isTargeting;
 
-    private GameObject player;
+    private GameObject target;
     void Start()
     {
         timer_cooltime = coolTime / 8;
         defultPos = Gun.transform.localPosition;
         animationSpeed = 4f;
         isTargeting = false;
-
-        player = GameObject.FindWithTag("Player");
     }
 
     void FixedUpdate()
     {
-        if (!player)
-        {
-            return;
-        }
-
         SearchAndFollow();
     }
 
     private void SearchAndFollow()
     {
-        target = player.transform.position;
-        target.y = transform.position.y;
+        if (!target)
+        {
+            target = null;
+            searchArea.SetActive(true);
+            return;
+        }
+
+        attackTarget = target.transform.position;
+        attackTarget.y = transform.position.y;
         defultFoward = fowardPos.position;
         defultFoward.y = transform.position.y;
 
-        if (Vector3.Distance(transform.position, player.transform.position) < searchDis)
+        if (Vector3.Distance(transform.position, target.transform.position) < searchDis)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target - transform.position), rotateSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(attackTarget - transform.position), rotateSpeed * Time.deltaTime);
             isTargeting = true;
         }
         else
@@ -69,9 +70,9 @@ public class NPCGunControl : MonoBehaviour
         Animation();
         Timer();
 
-        if (!player)
+        if (!target)
         {
-            player = null;
+            target = null;
             isTargeting = false;
         }
     }
@@ -139,5 +140,10 @@ public class NPCGunControl : MonoBehaviour
         float spreadAngleRatio = shotSpread / 180f;
         Vector3 spreadDirection = Vector3.Slerp(CreatePoint.forward, Random.insideUnitSphere, spreadAngleRatio);
         return spreadDirection;
+    }
+
+    public void SetTarget(GameObject Target)
+    {
+        target = Target;
     }
 }
