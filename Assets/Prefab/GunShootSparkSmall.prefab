@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4063651889407526470}
   - component: {fileID: 1062992847003872704}
   m_Layer: 0
-  m_Name: GunShootSpark
+  m_Name: GunShootSparkSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

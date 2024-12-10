@@ -16,7 +16,7 @@ public class PanzerMoveControl : MonoBehaviour
     void Start()
     {
         backSpeed = forwardSpeed / 2;
-        audioSource=GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0.05f;
     }
 
@@ -43,7 +43,7 @@ public class PanzerMoveControl : MonoBehaviour
         {
             velocity *= forwardSpeed;
         }
-        else if ((vertiacl < -0.1)) 
+        else if ((vertiacl < -0.1))
         {
             velocity *= backSpeed;
             horizontal *= -1f;
@@ -73,5 +73,10 @@ public class PanzerMoveControl : MonoBehaviour
     {
         smokeR.StartSmoke();
         smokeL.StartSmoke();
+    }
+
+    public float GetRotateSpeed()
+    {
+        return rotateSpeed;
     }
 }

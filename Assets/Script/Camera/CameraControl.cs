@@ -7,12 +7,12 @@ public class CameraControl : MonoBehaviour
 {
     [SerializeField] bool isMainCamera;
     [SerializeField] float SmoothTime = 0.3f;
-    [Header("Panzer RotateSpeed")][SerializeField] float rotateSpeed;
 
     private GameObject Target;
     private CameraChangeControl cameraChange;
     private Vector3 distance;
     private Vector3 Velocity = Vector3.zero;
+    private float rotateSpeed;
     private bool isZoom;
 
     void Start()
@@ -24,6 +24,7 @@ public class CameraControl : MonoBehaviour
         else
         {
             Target = GameObject.FindWithTag("Player");
+            rotateSpeed = Target.GetComponent<PanzerMoveControl>().GetRotateSpeed();
         }
 
         cameraChange=GameObject.FindWithTag("CameraSystem").GetComponent<CameraChangeControl>();
