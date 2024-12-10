@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class CameraControl : MonoBehaviour
 {
     [SerializeField] bool isMainCamera;
     [SerializeField] float SmoothTime = 0.3f;
 
-    private GameObject Target;
+    private GameObject cameraSystem;
+    private GameObject player;
+    private GameObject main2CameraPoint;
     private CameraChangeControl cameraChange;
     private Vector3 distance;
     private Vector3 Velocity = Vector3.zero;
@@ -19,17 +22,25 @@ public class CameraControl : MonoBehaviour
     {
         if (isMainCamera)
         {
-            Target = GameObject.FindWithTag("CameraSystem");
+            cameraSystem = GameObject.FindWithTag("CameraSystem");
+
+            if (gameObject.tag == "2ndMainCamera")
+            {
+                main2CameraPoint = GameObject.FindWithTag("2ndMainCameraPoint");
+            }
+
+            distance = transform.position - cameraSystem.transform.position;
+            isZoom = false;
         }
         else
         {
-            Target = GameObject.FindWithTag("Player");
-            rotateSpeed = Target.GetComponent<PanzerMoveControl>().GetRotateSpeed();
+            player = GameObject.FindWithTag("Player");
+            rotateSpeed = player.GetComponent<PanzerMoveControl>().GetRotateSpeed();
+
+            distance = transform.position - player.transform.position;
         }
 
-        cameraChange=GameObject.FindWithTag("CameraSystem").GetComponent<CameraChangeControl>();
-
-        distance = transform.position - Target.transform.position;
+        cameraChange = GameObject.FindWithTag("CameraSystem").GetComponent<CameraChangeControl>();
         isZoom = false;
     }
 
@@ -37,23 +48,34 @@ public class CameraControl : MonoBehaviour
     {
         isZoom = cameraChange.GetisZoom();
 
-        if (!Target)
+        if (!isMainCamera)
         {
-            Target = null;
-            StartCoroutine("Restart", 5);
+            if (!player)
+            {
+                player = null;
+                StartCoroutine("Restart", 5);
+            }
         }
     }
 
     void FixedUpdate()
     {
-        if (!Target)
+        if (!isMainCamera)
         {
-            return;
+            if (!player)
+            {
+                return;
+            }
         }
 
         if (isMainCamera)
         {
             CameraRotate();
+
+            if (gameObject.tag == "2ndMainCamera")
+            {
+                transform.position = main2CameraPoint.transform.position;
+            }
         }
         else
         {
@@ -63,7 +85,7 @@ public class CameraControl : MonoBehaviour
 
     private void SmoothMove()
     {
-        Vector3 targetPosition = Target.transform.position + distance;
+        Vector3 targetPosition = player.transform.position + distance;
 
         Vector3 smoothPosition = Vector3.SmoothDamp(transform.position, new Vector3(targetPosition.x, transform.position.y, targetPosition.z), ref Velocity, SmoothTime);
 
@@ -78,7 +100,7 @@ public class CameraControl : MonoBehaviour
 
         if (Mathf.Abs(MouseX) > 0.001f)
         {
-            transform.RotateAround(Target.transform.position, Vector3.up, MouseX);
+            transform.RotateAround(cameraSystem.transform.position, Vector3.up, MouseX);
         }
 
         if (isZoom)
@@ -87,7 +109,7 @@ public class CameraControl : MonoBehaviour
 
             if (Mathf.Abs(MouseX) > 0.001f)
             {
-                transform.RotateAround(Target.transform.position, Vector3.up, MouseX * rotateSpeed);
+                transform.RotateAround(cameraSystem.transform.position, Vector3.up, MouseX * rotateSpeed);
             }
         }
     }

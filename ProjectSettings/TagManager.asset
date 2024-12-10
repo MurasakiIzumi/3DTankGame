@@ -26,6 +26,8 @@ TagManager:
   - NowAmmo
   - AllAmmo
   - PlayerHead
+  - 2ndMainCamera
+  - 2ndMainCameraPoint
   layers:
   - Default
   - TransparentFX
