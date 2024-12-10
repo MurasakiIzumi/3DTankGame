@@ -5,6 +5,7 @@ using static UnityEditorInternal.VersionControl.ListControl;
 
 public class NPCHPControl : MonoBehaviour
 {
+    [SerializeField] int defLv;
     [SerializeField] int headHP;
     [SerializeField] int forwardHP;
     [SerializeField] int backHP;
@@ -78,5 +79,10 @@ public class NPCHPControl : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+    }
+
+    public int GetDefLv()
+    {
+        return defLv; ;
     }
 }

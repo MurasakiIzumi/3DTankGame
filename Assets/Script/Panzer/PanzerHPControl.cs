@@ -19,6 +19,7 @@ public class PanzerHPControl : MonoBehaviour
     [SerializeField] Material DeepRed;
     [SerializeField] Material DeepBlack;
 
+    [SerializeField] int defLv;
     [SerializeField] int headHP;
     [SerializeField] int forwardHP;
     [SerializeField] int backHP;
@@ -170,5 +171,8 @@ public class PanzerHPControl : MonoBehaviour
         }
     }
 
-
+    public int GetDefLv()
+    {
+        return defLv; ;
+    }
 }

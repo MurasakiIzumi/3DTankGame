@@ -74,6 +74,11 @@ public class CameraControl : MonoBehaviour
 
             if (gameObject.tag == "2ndMainCamera")
             {
+                if (!main2CameraPoint)
+                {
+                    return;
+                }
+
                 transform.position = main2CameraPoint.transform.position;
             }
         }

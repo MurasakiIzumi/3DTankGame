@@ -106,6 +106,7 @@ MonoBehaviour:
   DeepYellow: {fileID: 2100000, guid: 3e9f89a5b0116c948aa7ee49bff1bbfa, type: 2}
   DeepRed: {fileID: 2100000, guid: c4cbb1b8e1370454f9ea909ff0b8de64, type: 2}
   DeepBlack: {fileID: 2100000, guid: 7e69003339ca9054fa5e1854da65eb3a, type: 2}
+  defLv: 1
   headHP: 3
   forwardHP: 3
   backHP: 3

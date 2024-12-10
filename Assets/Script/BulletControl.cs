@@ -6,17 +6,21 @@ public class BulletControl : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] float dropSpeed;
+    [SerializeField] int apLv;
     [SerializeField] int Damage;
-    [Header("—Ž‰ºŠJŽnŽžŠÔ")][SerializeField] float rangeTime;
-    [Header("ŠO‚ê")][SerializeField] GameObject missSpark1;
-                    [SerializeField] GameObject missSpark2;
-    [Header("–½’†")][SerializeField] GameObject hitSpark;
+    [SerializeField] float baseHitRate;
+    [SerializeField] float rangeTime;
+    [SerializeField] GameObject missSpark1;
+    [SerializeField] GameObject missSpark2;
+    [SerializeField] GameObject hitSpark;
 
     private float timer_range;
+    private float HitRate;
 
     void Start()
     {
         timer_range = 0;
+        HitRate = baseHitRate;
     }
 
     void Update()
@@ -76,7 +80,12 @@ public class BulletControl : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            if (Random.Range(1, 101) > 60)
+            if (apLv <= collision.gameObject.GetComponent<PanzerHPControl>().GetDefLv())
+            {
+                HitRate = baseHitRate / 2;
+            }
+
+            if (Random.Range(1, 101) < HitRate)
             {
                 collision.collider.gameObject.GetComponent<PanzerCollision>().GetDamage(1);
                 HitTarget();
@@ -89,7 +98,12 @@ public class BulletControl : MonoBehaviour
 
         if (collision.gameObject.tag == "NPC")
         {
-            if (Random.Range(1, 101) > 50)
+            if (apLv <= collision.gameObject.GetComponent<NPCHPControl>().GetDefLv())
+            {
+                HitRate = baseHitRate / 2;
+            }
+
+            if (Random.Range(1, 101) < HitRate)
             {
                 collision.collider.gameObject.GetComponent<NPCCollision>().GetDamage(1);
                 HitTarget();
