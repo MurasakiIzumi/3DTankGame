@@ -741,6 +741,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 888265838096409207, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4323536645394038188, guid: d33589ecadd0fe843a179d280b2d4113, type: 3}
       propertyPath: m_TagString
       value: NPCHeadCollision
