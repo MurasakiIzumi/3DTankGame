@@ -21,9 +21,11 @@ public class PanzerGunControl : MonoBehaviour
     [SerializeField] int ammoMax;
     [SerializeField] int ammoOnce;
 
+    [SerializeField] float gunBackTimeLimit;
+    [SerializeField] float gunBackSpeed;
+
     private float timer_cooltime;
     private float timer_relordtime;
-    private float animationSpeed;
     private Vector3 defultPos;
     private Vector3 sparkPos;
 
@@ -42,7 +44,6 @@ public class PanzerGunControl : MonoBehaviour
         timer_cooltime = coolTime;
         timer_relordtime = 0f;
         defultPos =Gun.transform.localPosition;
-        animationSpeed = 4f;
 
         audioSource =GetComponent<AudioSource>();
         audioSource.clip = relordSE;
@@ -50,6 +51,7 @@ public class PanzerGunControl : MonoBehaviour
         NowAmmoUI = GameObject.FindWithTag("NowAmmo").GetComponent<TextMeshProUGUI>();
         AllAmmoUI = GameObject.FindWithTag("AllAmmo").GetComponent<TextMeshProUGUI>();
         animator = GameObject.FindWithTag("Sight").GetComponent<Animator>();
+        animator.speed = 1f / relordTime;
 
         allAmmo = ammoMax;
         nowAmmo = ammoOnce;
@@ -172,17 +174,17 @@ public class PanzerGunControl : MonoBehaviour
             return;
         }
 
-        if (timer_cooltime >= coolTime)
+        if (timer_cooltime >= coolTime / gunBackTimeLimit)
         {
             Gun.transform.localPosition = defultPos;
         }
-        else if (timer_cooltime > coolTime / 2)
+        else if (timer_cooltime > coolTime / gunBackTimeLimit / 2f)
         {
-            Gun.transform.localPosition += Vector3.forward * animationSpeed * Time.deltaTime;
+            Gun.transform.localPosition += Vector3.forward * gunBackSpeed * Time.deltaTime;
         }
-        else if (timer_cooltime < coolTime / 2)
+        else if (timer_cooltime < coolTime / gunBackTimeLimit / 2f)
         {
-            Gun.transform.localPosition += Vector3.back * animationSpeed * Time.deltaTime;
+            Gun.transform.localPosition += Vector3.back * gunBackSpeed * Time.deltaTime;
         }
     }
 

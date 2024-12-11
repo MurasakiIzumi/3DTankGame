@@ -68,17 +68,17 @@ public class BulletControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             HitGround();
         }
 
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.CompareTag ("Wall"))
         {
             HitWall();
         }
 
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             if (apLv <= collision.gameObject.GetComponent<PanzerHPControl>().GetDefLv())
             {
@@ -87,7 +87,16 @@ public class BulletControl : MonoBehaviour
 
             if (Random.Range(1, 101) < HitRate)
             {
-                collision.collider.gameObject.GetComponent<PanzerCollision>().GetDamage(1);
+                if (collision.collider.gameObject.GetComponent<PanzerCollision>())
+                {
+                    collision.collider.gameObject.GetComponent<PanzerCollision>().GetDamage(1);
+                }
+                else
+                {
+                    MissTarget();
+                    return;
+                }
+                
                 HitTarget();
             }
             else
@@ -96,7 +105,7 @@ public class BulletControl : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "NPC")
+        if (collision.gameObject.CompareTag("NPC"))
         {
             if (apLv <= collision.gameObject.GetComponent<NPCHPControl>().GetDefLv())
             {
@@ -105,7 +114,16 @@ public class BulletControl : MonoBehaviour
 
             if (Random.Range(1, 101) < HitRate)
             {
-                collision.collider.gameObject.GetComponent<NPCCollision>().GetDamage(1);
+                if (collision.collider.gameObject.GetComponent<NPCCollision>())
+                {
+                    collision.collider.gameObject.GetComponent<NPCCollision>().GetDamage(1);
+                }
+                else
+                {
+                    MissTarget();
+                    return;
+                }
+
                 HitTarget();
             }
             else

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditorInternal.VersionControl.ListControl;
 
 public class NPCHPControl : MonoBehaviour
 {
@@ -76,9 +75,15 @@ public class NPCHPControl : MonoBehaviour
 
         if (coreHP <= 0)
         {
+            Debug.Log(1);
             Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            DestroySelf();
         }
+    }
+
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     public int GetDefLv()

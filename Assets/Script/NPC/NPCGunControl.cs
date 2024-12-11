@@ -16,8 +16,10 @@ public class NPCGunControl : MonoBehaviour
     [SerializeField] float searchDis;
     [SerializeField] float rotateSpeed;
 
+    [SerializeField] float gunBackTimeLimit;
+    [SerializeField] float gunBackSpeed;
+
     private float timer_cooltime;
-    private float animationSpeed;
     private Vector3 defultPos;
     private Vector3 defultFoward;
     private Vector3 sparkPos;
@@ -29,7 +31,6 @@ public class NPCGunControl : MonoBehaviour
     {
         timer_cooltime = coolTime / 8;
         defultPos = Gun.transform.localPosition;
-        animationSpeed = 4f;
         isTargeting = false;
     }
 
@@ -97,17 +98,22 @@ public class NPCGunControl : MonoBehaviour
 
     private void Animation()
     {
-        if (timer_cooltime >= coolTime / 8) 
+        if (!isTargeting)
+        {
+            return;
+        }
+        
+        if (timer_cooltime >= coolTime / gunBackTimeLimit) 
         {
             Gun.transform.localPosition = defultPos;
         }
-        else if (timer_cooltime > coolTime / 16)
+        else if (timer_cooltime > coolTime / gunBackTimeLimit/2f)
         {
-            Gun.transform.localPosition += Vector3.forward * animationSpeed * Time.deltaTime;
+            Gun.transform.localPosition += Vector3.forward * gunBackSpeed * Time.deltaTime;
         }
-        else if (timer_cooltime < coolTime / 16)
+        else if (timer_cooltime < coolTime / gunBackTimeLimit/2f)
         {
-            Gun.transform.localPosition += Vector3.back * animationSpeed * Time.deltaTime;
+            Gun.transform.localPosition += Vector3.back * gunBackSpeed * Time.deltaTime;
         }
     }
 

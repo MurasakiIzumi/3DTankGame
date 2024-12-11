@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class NPCCollision : MonoBehaviour
 {
-    private NPCHPControl hpControl;
-    void Start()
-    {
-        hpControl = GameObject.FindWithTag("NPC").GetComponent<NPCHPControl>();
-    }
+    [SerializeField] NPCHPControl hpControl;
 
     public void GetDamage(int damage)
     {
-        if (gameObject.tag == ("NPCHeadCollision"))
+        if (gameObject.CompareTag("NPCHeadCollision"))
         {
             hpControl.HeadGetDamage(damage);
         }
-        else if (gameObject.tag == ("NPCFowCollision"))
+        else if (gameObject.CompareTag("NPCFowCollision"))
         {
             hpControl.ForwardGetDamage(damage);
         }
-        else if (gameObject.tag == ("NPCBackCollision"))
+        else if (gameObject.CompareTag("NPCBackCollision"))
         {
             hpControl.BackGetDamage(damage);
         }
-        else if (gameObject.tag == ("NPCRightCollision"))
+        else if (gameObject.CompareTag("NPCRightCollision"))
         {
             hpControl.RightGetDamage(damage);
         }
-        else if (gameObject.tag == ("NPCLeftCollision"))
+        else if (gameObject.CompareTag("NPCLeftCollision"))
         {
             hpControl.LeftGetDamage(damage);
         }
-        else if (gameObject.tag == ("Armour"))
+        else if (gameObject.CompareTag("Armour"))
         {
             Destroy(gameObject);
         }

@@ -5,12 +5,10 @@ using UnityEngine;
 public class StateCameraControl : MonoBehaviour
 {
     private GameObject posTarget;
-    private GameObject rotateTarget;
 
     void Start()
     {
         posTarget = GameObject.FindWithTag("Player");
-        rotateTarget = GameObject.FindWithTag("PlayerHead");
     }
     void Update()
     {
@@ -35,7 +33,7 @@ public class StateCameraControl : MonoBehaviour
 
     private void FollowTargetRotate()
     {
-        Vector3 targetRotate = new Vector3(90f, 0f, -rotateTarget.transform.localEulerAngles.y);
+        Vector3 targetRotate = new Vector3(90f, 0f, -posTarget.transform.eulerAngles.y);
         transform.localEulerAngles = targetRotate;
 
     }

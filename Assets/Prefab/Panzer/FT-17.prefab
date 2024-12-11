@@ -616,7 +616,7 @@ Transform:
   m_GameObject: {fileID: 1307258680452845030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.325, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.375, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -731,8 +731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CreatePoint: {fileID: 284717709789635287}
-  Bullet: {fileID: 3916639827746127666, guid: b9f2de6afecdf2146b6bf938ebb4807c, type: 3}
-  GunSpark: {fileID: 938860635534822922, guid: 24711de14e58df447af2f19e162e57c9, type: 3}
+  Bullet: {fileID: 3916639827746127666, guid: 6996e132374a91048873e851466d2a27, type: 3}
+  GunSpark: {fileID: 938860635534822922, guid: eb4032a0706be1f4288b45bb605dfa23, type: 3}
   Gun: {fileID: 2502339416217450102}
   relordSE: {fileID: 8300000, guid: 9c86b8d5fa6855e43a2fa0b633a1237d, type: 3}
   noammoSE: {fileID: 8300000, guid: cacd9d9d9bc42df4d9bc31431459b6ea, type: 3}
@@ -741,6 +741,8 @@ MonoBehaviour:
   relordTime: 1
   ammoMax: 24
   ammoOnce: 1
+  gunBackTimeLimit: 1
+  gunBackSpeed: 4
 --- !u!82 &7023937363492452012
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1149,7 +1151,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.100000024, z: 0.4}
-  m_LocalScale: {x: 0.15, y: 0.5, z: 0.15}
+  m_LocalScale: {x: 0.25, y: 0.5, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5863009551885396329}
@@ -2024,7 +2026,7 @@ Transform:
   m_GameObject: {fileID: 4561039097575869969}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.025, z: 0.2}
+  m_LocalPosition: {x: 0, y: -0.075, z: 0.2}
   m_LocalScale: {x: 0.1, y: 0.25, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2225,7 +2227,7 @@ Transform:
   m_GameObject: {fileID: 5148039845619950280}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalPosition: {x: 0, y: 9, z: -0.4}
   m_LocalScale: {x: 2, y: 0.4, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:

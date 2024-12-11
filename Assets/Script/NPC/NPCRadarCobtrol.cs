@@ -15,11 +15,11 @@ public class NPCRadarCobtrol : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if (other.gameObject.tag == "NPC")
-        {
-            npcGunControl.SetTarget(other.gameObject);
-
-            gameObject.SetActive(false);
-        }
+        //if (other.gameObject.tag == "NPC")
+        //{
+        //    npcGunControl.SetTarget(other.gameObject);
+        //
+        //    gameObject.SetActive(false);
+        //}
     }
 }

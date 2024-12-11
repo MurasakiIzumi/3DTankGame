@@ -154,7 +154,7 @@ MonoBehaviour:
   apLv: 2
   Damage: 1
   baseHitRate: 50
-  rangeTime: 1.5
+  rangeTime: 2
   missSpark1: {fileID: 1963387136426011568, guid: 903eee204a3a2e849a301693e556a684, type: 3}
   missSpark2: {fileID: 1963387136426011568, guid: d6e22aebe15eee6479e6c3a5b6155cc1, type: 3}
   hitSpark: {fileID: 1963387136426011568, guid: 9bbf55ee58647af40bc40843aa203b80, type: 3}
