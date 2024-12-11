@@ -14,6 +14,14 @@ public class NPCHPControl : MonoBehaviour
 
     [SerializeField] GameObject explosion;
 
+    private GameControl gameControl;
+
+    private void Start()
+    {
+        gameControl = GameObject.FindWithTag("EventSystem").GetComponent<GameControl>();
+        gameControl.AddEnemy();
+    }
+
     public void HeadGetDamage(int Damage)
     {
         headHP -= Damage;
@@ -83,6 +91,7 @@ public class NPCHPControl : MonoBehaviour
 
     private void DestroySelf()
     {
+        gameControl.EnemyDestroy();
         Destroy(gameObject);
     }
 

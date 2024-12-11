@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smokeR: {fileID: 8165029818411517911}
   smokeL: {fileID: 958467037651632543}
-  forwardSpeed: 3
+  forwardSpeed: 2.5
   rotateSpeed: 0.8
 --- !u!114 &4519796539985365280
 MonoBehaviour:

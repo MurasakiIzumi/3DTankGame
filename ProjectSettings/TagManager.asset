@@ -28,6 +28,8 @@ TagManager:
   - PlayerHead
   - 2ndMainCamera
   - 2ndMainCameraPoint
+  - Data
+  - EventSystem
   layers:
   - Default
   - TransparentFX
