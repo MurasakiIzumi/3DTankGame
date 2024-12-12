@@ -13,6 +13,7 @@ public class TitleControl : MonoBehaviour
     [SerializeField] GameObject DataMessenger;
     [SerializeField] float SmoothTime = 0.3f;
     [SerializeField] Vector3[] cameraPos;
+    [SerializeField] GameObject[] panzerText; 
 
     private bool seleteStart;
     private int PanzerIndexMax;
@@ -43,27 +44,40 @@ public class TitleControl : MonoBehaviour
 
             titleCamera.transform.position = smoothPosition;
 
-            titleCamera.transform.rotation = Quaternion.Slerp(titleCamera.transform.rotation, Quaternion.Euler(new Vector3(8f, 56f, 0f)), Time.deltaTime);
+            titleCamera.transform.rotation = Quaternion.Slerp(titleCamera.transform.rotation, Quaternion.Euler(new Vector3(8f, 59f, 0f)), Time.deltaTime);
         }
+    }
+
+    private void TextChange()
+    {
+        for (int i = 0; i < panzerText.Length; i++)
+        {
+            panzerText[i].SetActive(false);
+        }
+
+        panzerText[panzerIndex].SetActive(true);
     }
 
     public void SetTitleOver()
     {
         seleteStart = true;
         titleUI.SetActive(false);
-        selectUI.SetActive(true);
+
+        StartCoroutine("UIChange", 2);
     }
 
     public void LeftButton()
     {
         panzerIndex--;
         panzerIndex = Mathf.Max(panzerIndex, 0);
+        TextChange();
     }
 
     public void RightButton()
     {
         panzerIndex++;
         panzerIndex = Mathf.Min(panzerIndex, PanzerIndexMax - 1);
+        TextChange();
     }
 
     public void SelectButton()
@@ -73,5 +87,12 @@ public class TitleControl : MonoBehaviour
         data.SetPanzerIndex(panzerIndex);
 
         SceneManager.LoadScene("GameScene");
+    }
+
+    IEnumerator UIChange(int Sce)
+    {
+        yield return new WaitForSecondsRealtime(Sce);
+
+        selectUI.SetActive(true);
     }
 }
