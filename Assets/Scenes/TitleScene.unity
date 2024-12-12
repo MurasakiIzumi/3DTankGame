@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleCamera: {fileID: 600789719}
   titleUI: {fileID: 125940595}
-  seleteUI: {fileID: 1726411820}
+  selectUI: {fileID: 1726411820}
   DataMessenger: {fileID: 7341088621592849550, guid: aced0f95aff00d94192a313d1ba68748, type: 3}
   SmoothTime: 0.3
   cameraPos:
@@ -1683,7 +1683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Selete
+  m_text: Select
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1807,7 +1807,7 @@ GameObject:
   - component: {fileID: 1726411822}
   - component: {fileID: 1726411821}
   m_Layer: 5
-  m_Name: SeleteUI
+  m_Name: SelectUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2198,7 +2198,7 @@ GameObject:
   - component: {fileID: 2138650852}
   - component: {fileID: 2138650855}
   m_Layer: 5
-  m_Name: Selete
+  m_Name: Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2270,7 +2270,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2138650855}
         m_TargetAssemblyTypeName: TitleButton, Assembly-CSharp
-        m_MethodName: Selete
+        m_MethodName: Select
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

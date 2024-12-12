@@ -21,8 +21,8 @@ public class TitleButton : MonoBehaviour
         titleControl.RightButton();
     }
 
-    public void Selete()
+    public void Select()
     {
-        titleControl.SeleteButton();
+        titleControl.SelectButton();
     }
 }

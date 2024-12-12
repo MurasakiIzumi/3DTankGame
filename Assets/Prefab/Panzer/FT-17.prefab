@@ -737,9 +737,9 @@ MonoBehaviour:
   relordSE: {fileID: 8300000, guid: 9c86b8d5fa6855e43a2fa0b633a1237d, type: 3}
   noammoSE: {fileID: 8300000, guid: cacd9d9d9bc42df4d9bc31431459b6ea, type: 3}
   shotSpread: 3
-  coolTime: 0.25
+  coolTime: 0.75
   relordTime: 1
-  ammoMax: 24
+  ammoMax: 36
   ammoOnce: 1
   gunBackTimeLimit: 1
   gunBackSpeed: 4

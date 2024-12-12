@@ -120,7 +120,7 @@ MonoBehaviour:
   backHP: 2
   rightHP: 2
   leftHP: 2
-  coreHP: 2
+  coreHP: 1
   explosion: {fileID: 1963387136426011568, guid: 6001ac1e312cdef4bb1d22660cbe6681, type: 3}
 --- !u!82 &-1082447627291517879
 AudioSource:
@@ -141,11 +141,11 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  DopplerLevel: 0
+  MinDistance: 0
+  MaxDistance: 100
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -178,7 +178,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -193,7 +193,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0

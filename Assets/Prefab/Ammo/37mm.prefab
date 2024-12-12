@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 40
   dropSpeed: 1
-  apLv: 2
+  apLv: 3
   Damage: 1
   baseHitRate: 50
   rangeTime: 2

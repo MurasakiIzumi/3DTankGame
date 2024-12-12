@@ -1468,7 +1468,7 @@ MonoBehaviour:
   shotSpread: 2
   coolTime: 0.15
   relordTime: 2
-  ammoMax: 250
+  ammoMax: 100
   ammoOnce: 50
   gunBackTimeLimit: 1.5
   gunBackSpeed: 4
@@ -4062,8 +4062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smokeR: {fileID: 7179721761721680183}
   smokeL: {fileID: 6772850251232767038}
-  forwardSpeed: 5
-  rotateSpeed: 0.7
+  forwardSpeed: 8
+  rotateSpeed: 0.8
 --- !u!114 &6308941596474890534
 MonoBehaviour:
   m_ObjectHideFlags: 0

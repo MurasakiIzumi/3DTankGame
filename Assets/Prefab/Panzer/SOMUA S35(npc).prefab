@@ -575,7 +575,7 @@ Transform:
   m_GameObject: {fileID: 1787318627980545887}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1391,7 +1391,7 @@ MonoBehaviour:
   backHP: 3
   rightHP: 3
   leftHP: 3
-  coreHP: 2
+  coreHP: 1
   explosion: {fileID: 1963387136426011568, guid: 6001ac1e312cdef4bb1d22660cbe6681, type: 3}
 --- !u!82 &3881118987803843576
 AudioSource:
@@ -1412,11 +1412,11 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  DopplerLevel: 0
+  MinDistance: 0
+  MaxDistance: 100
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1449,7 +1449,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1464,7 +1464,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1909,7 +1909,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 378db5d98d0648b4984298fc62bfc214, type: 2}
+  - {fileID: 2100000, guid: 4915d201e009b874ba75475fca0129a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

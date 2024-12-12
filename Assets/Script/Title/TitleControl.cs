@@ -9,7 +9,7 @@ public class TitleControl : MonoBehaviour
 {
     [SerializeField] GameObject titleCamera;
     [SerializeField] GameObject titleUI;
-    [SerializeField] GameObject seleteUI;
+    [SerializeField] GameObject selectUI;
     [SerializeField] GameObject DataMessenger;
     [SerializeField] float SmoothTime = 0.3f;
     [SerializeField] Vector3[] cameraPos;
@@ -51,7 +51,7 @@ public class TitleControl : MonoBehaviour
     {
         seleteStart = true;
         titleUI.SetActive(false);
-        seleteUI.SetActive(true);
+        selectUI.SetActive(true);
     }
 
     public void LeftButton()
@@ -66,7 +66,7 @@ public class TitleControl : MonoBehaviour
         panzerIndex = Mathf.Min(panzerIndex, PanzerIndexMax - 1);
     }
 
-    public void SeleteButton()
+    public void SelectButton()
     {
         GameObject Data = Instantiate(DataMessenger, transform.position, Quaternion.identity);
         DataMessenger data = Data.GetComponent<DataMessenger>();

@@ -40,6 +40,7 @@ public class PanzerHeadRotateControl : MonoBehaviour
         GunSystem.transform.localEulerAngles = Vector3.zero;
 
         Vector3 target=targetPoint.transform.position;
+        target.y = GunSystem.transform.position.y;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target - transform.position), rotateSpeed * Time.fixedDeltaTime);
     }
 
