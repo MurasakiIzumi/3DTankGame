@@ -95,6 +95,11 @@ public class NPCHPControl : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void Engage()
+    {
+        gameControl.GetComponent<NPCMoveControl>().Engage();
+    }
+
     public int GetDefLv()
     {
         return defLv; ;

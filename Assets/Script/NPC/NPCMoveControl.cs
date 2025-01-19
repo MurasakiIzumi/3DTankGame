@@ -9,12 +9,14 @@ public class NPCMoveControl : MonoBehaviour
     [SerializeField] float forwardSpeed;
     [SerializeField] float rotateSpeed;
 
+    private bool isEngage;
     private float backSpeed;
     private Vector3 velocity;
     private AudioSource audioSource;
 
     void Start()
     {
+        isEngage = false;
         backSpeed = forwardSpeed / 2;
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0.05f;
@@ -27,7 +29,10 @@ public class NPCMoveControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        PanzerMove();
+        if (!isEngage)
+        {
+            PanzerMove();
+        }
     }
 
     private void PanzerMove()
@@ -73,5 +78,12 @@ public class NPCMoveControl : MonoBehaviour
     {
         smokeR.StartSmoke();
         smokeL.StartSmoke();
+    }
+
+    public void Engage()
+    {
+        isEngage = true;
+        smokeR.gameObject.SetActive(false);
+        smokeL.gameObject.SetActive(false);
     }
 }

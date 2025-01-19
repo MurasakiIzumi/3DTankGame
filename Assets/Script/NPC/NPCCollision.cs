@@ -8,6 +8,8 @@ public class NPCCollision : MonoBehaviour
 
     public void GetDamage(int damage)
     {
+        hpControl.Engage();
+
         if (gameObject.CompareTag("NPCHeadCollision"))
         {
             hpControl.HeadGetDamage(damage);
