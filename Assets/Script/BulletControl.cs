@@ -16,17 +16,24 @@ public class BulletControl : MonoBehaviour
 
     private float timer_range;
     private float HitRate;
+    private float timer;
+    private float safe_time;
+    private bool saftyOff;
 
     void Start()
     {
         timer_range = 0;
         HitRate = baseHitRate;
+        timer = 0;
+        safe_time = 0.5f;
+        saftyOff = false;
     }
 
     void Update()
     {
         MoveForward();
         Drop();
+        Timer();
     }
 
     private void MoveForward()
@@ -41,6 +48,21 @@ public class BulletControl : MonoBehaviour
         if (timer_range > rangeTime)
         {
             transform.position += Vector3.down * dropSpeed * Time.deltaTime;
+        }
+    }
+
+    private void Timer()
+    {
+        if (saftyOff)
+        {
+            if (timer > safe_time)
+            {
+                saftyOff = true;
+            }
+            else
+            {
+                timer += Time.deltaTime;
+            }
         }
     }
 
@@ -68,6 +90,11 @@ public class BulletControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!saftyOff)
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("Ground"))
         {
             HitGround();

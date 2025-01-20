@@ -1152,6 +1152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcGunControl: {fileID: 1419021975183498975}
+  npcMoveControl: {fileID: 3144547476771095631}
 --- !u!1 &5292076217831501346
 GameObject:
   m_ObjectHideFlags: 0
