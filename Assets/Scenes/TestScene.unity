@@ -409,7 +409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 29933594932863721, guid: 56500bb02d3f6d24b8ebeb59e28abc73, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7581867926769177222, guid: 56500bb02d3f6d24b8ebeb59e28abc73, type: 3}
       propertyPath: gunBackSpeed
@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5325026773630651249, guid: 97605c9eb4147b444bc730952a872495, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
