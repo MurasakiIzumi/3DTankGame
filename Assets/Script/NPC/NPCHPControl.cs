@@ -97,7 +97,7 @@ public class NPCHPControl : MonoBehaviour
 
     public void Engage()
     {
-        gameControl.GetComponent<NPCMoveControl>().Engage();
+        gameObject.GetComponent<NPCMoveControl>().Engage();
     }
 
     public int GetDefLv()

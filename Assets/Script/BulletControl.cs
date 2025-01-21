@@ -18,15 +18,15 @@ public class BulletControl : MonoBehaviour
     private float HitRate;
     private float timer;
     private float safe_time;
-    private bool saftyOff;
+    private bool safty;
 
     void Start()
     {
         timer_range = 0;
         HitRate = baseHitRate;
         timer = 0;
-        safe_time = 0.5f;
-        saftyOff = false;
+        safe_time = 0.1f;
+        safty = true;
     }
 
     void Update()
@@ -53,11 +53,11 @@ public class BulletControl : MonoBehaviour
 
     private void Timer()
     {
-        if (saftyOff)
+        if (safty)
         {
             if (timer > safe_time)
             {
-                saftyOff = true;
+                safty = false;
             }
             else
             {
@@ -90,7 +90,7 @@ public class BulletControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!saftyOff)
+        if (safty)
         {
             return;
         }
