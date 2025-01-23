@@ -1384,9 +1384,9 @@ MonoBehaviour:
   DataMessenger: {fileID: 7341088621592849550, guid: aced0f95aff00d94192a313d1ba68748, type: 3}
   SmoothTime: 0.3
   cameraPos:
-  - {x: -67, y: 3, z: 70}
-  - {x: -52, y: 3, z: 70}
-  - {x: -37, y: 3, z: 70}
+  - {x: -66.5, y: 2, z: 70}
+  - {x: -51.5, y: 2.5, z: 70}
+  - {x: -36.5, y: 2.5, z: 70}
   panzerText:
   - {fileID: 1961309356}
   - {fileID: 318350638}
@@ -1484,13 +1484,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1656519071}
     m_Modifications:
+    - target: {fileID: 337859063263665276, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887781305516455841, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -63
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: 1.133
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1524,6 +1532,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7502673378189183750, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8921654634602478444, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_Name
       value: Matilda Mk.I(Title) (1)
@@ -1545,45 +1557,53 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1887781305516455841, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -100.5
+      value: -100.472565
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.75
+      value: 6.88
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -87.259
+      value: -87.29861
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9422485
+      value: 0.9351614
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.05670303
+      value: 0.015226903
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.32871643
+      value: 0.35156918
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.029966442
+      value: 0.040503014
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 38.7
+      value: 41.207
       objectReference: {fileID: 0}
     - target: {fileID: 6124981216267720614, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 5.4
+      value: 4.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502673378189183750, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8921654634602478444, guid: 53e20ffe9a5d56d4b9fdf2a10230a2df, type: 3}
       propertyPath: m_Name
@@ -2155,6 +2175,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1656519071}
     m_Modifications:
+    - target: {fileID: -5425735439605695819, guid: 25af46d4ffa2d3b49b2db6c1d85186f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 29933594932863721, guid: 25af46d4ffa2d3b49b2db6c1d85186f8, type: 3}
       propertyPath: m_Name
       value: FT-17(Title) (3)
@@ -2384,9 +2408,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Matilda Mk.I\n                    (\u6226\u6642\u6539\u4FEE\u4ED5\u69D8)\n\n\u958B\u767A\u56FD: 
-    \u30A4\u30AE\u30EA\u30B9\n\u8A2D\u8A08\u5E74\u4EE3:   1935\u5E74\n\n\u4E3B\u7832: 
-    \n    Vickers .50 Machine Gun\n\n\u88C5\u7532:  65 mm"
+  m_Text: "Matilda Mk.I\n\n\u958B\u767A\u56FD:  \u30A4\u30AE\u30EA\u30B9\n\u8A2D\u8A08\u5E74\u4EE3:  
+    1935\u5E74\n\n\u4E3B\u7832:  \n    Vickers .50 Machine Gun\n\n\u88C5\u7532: 
+    65 mm"
 --- !u!222 &1961309359
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2408,6 +2432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1656519071}
     m_Modifications:
+    - target: {fileID: -3929370592297891905, guid: 00b501b4c58994241801d0c12b419404, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4099596027909789576, guid: 00b501b4c58994241801d0c12b419404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33
