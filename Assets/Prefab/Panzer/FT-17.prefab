@@ -1974,8 +1974,8 @@ MonoBehaviour:
   relordTime: 1
   ammoMax: 36
   ammoOnce: 1
-  gunBackTimeLimit: 4
-  gunBackSpeed: 3
+  gunBackTimeLimit: 0
+  gunBackSpeed: 0
 --- !u!82 &6907749311661257645
 AudioSource:
   m_ObjectHideFlags: 0
