@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 5382011060432139488}
   - component: {fileID: 5289733912099956511}
   - component: {fileID: 5477948433446770823}
+  - component: {fileID: 2060548936267745046}
   m_Layer: 0
   m_Name: SOMUA S35
   m_TagString: Player
@@ -598,6 +599,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2060548936267745046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5325026773630651249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2d7a8b03b81aa4cbc41ab22af3d7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunControl: {fileID: 4603856256826112703}
 --- !u!1 &5724905661572480147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2711,7 @@ MonoBehaviour:
   relordTime: 0.75
   ammoMax: 36
   ammoOnce: 1
+  supplyAmmo: 1
   gunBackTimeLimit: 1
   gunBackSpeed: 4
 --- !u!82 &2673981668659270759

@@ -83,7 +83,6 @@ public class NPCHPControl : MonoBehaviour
 
         if (coreHP <= 0)
         {
-            Debug.Log(1);
             Instantiate(explosion, transform.position, Quaternion.identity);
             DestroySelf();
         }

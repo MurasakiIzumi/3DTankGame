@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3139772926934058894}
   - component: {fileID: 805753862325193365}
   - component: {fileID: 6543990589480695654}
+  - component: {fileID: 3424313227171915077}
   m_Layer: 0
   m_Name: FT-17
   m_TagString: Player
@@ -233,6 +234,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3424313227171915077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29933594932863721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2d7a8b03b81aa4cbc41ab22af3d7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunControl: {fileID: 7581867926769177222}
 --- !u!1 &1307258680452845030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,8 +1988,9 @@ MonoBehaviour:
   relordTime: 1
   ammoMax: 36
   ammoOnce: 1
-  gunBackTimeLimit: 0
-  gunBackSpeed: 0
+  supplyAmmo: 1
+  gunBackTimeLimit: 4
+  gunBackSpeed: 3
 --- !u!82 &6907749311661257645
 AudioSource:
   m_ObjectHideFlags: 0

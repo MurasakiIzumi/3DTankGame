@@ -848,6 +848,7 @@ GameObject:
   - component: {fileID: 4780830165718219454}
   - component: {fileID: 6308941596474890534}
   - component: {fileID: 3869043718282188141}
+  - component: {fileID: 3351210095969638730}
   m_Layer: 0
   m_Name: Matilda Mk.I
   m_TagString: Player
@@ -1067,6 +1068,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3351210095969638730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921654634602478444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2d7a8b03b81aa4cbc41ab22af3d7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunControl: {fileID: 3364650783752839836}
 --- !u!1001 &7293814314342157927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2121,6 +2135,7 @@ MonoBehaviour:
   relordTime: 2
   ammoMax: 150
   ammoOnce: 50
+  supplyAmmo: 50
   gunBackTimeLimit: 0
   gunBackSpeed: 0
 --- !u!82 &4585505817334879547

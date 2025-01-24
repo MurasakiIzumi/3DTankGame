@@ -20,6 +20,7 @@ public class PanzerGunControl : MonoBehaviour
     [SerializeField] float relordTime;
     [SerializeField] int ammoMax;
     [SerializeField] int ammoOnce;
+    [SerializeField] int supplyAmmo;
 
     [SerializeField] float gunBackTimeLimit;
     [SerializeField] float gunBackSpeed;
@@ -34,8 +35,11 @@ public class PanzerGunControl : MonoBehaviour
     private bool reLording;
     private bool noAmmo;
 
+    private bool inSupplyArea;
+
     private AudioSource audioSource;
-    private Animator animator;
+    private Animator animator_sight;
+    private Animator animator_supply;
     private TextMeshProUGUI NowAmmoUI;
     private TextMeshProUGUI AllAmmoUI;
 
@@ -50,14 +54,18 @@ public class PanzerGunControl : MonoBehaviour
 
         NowAmmoUI = GameObject.FindWithTag("NowAmmo").GetComponent<TextMeshProUGUI>();
         AllAmmoUI = GameObject.FindWithTag("AllAmmo").GetComponent<TextMeshProUGUI>();
-        animator = GameObject.FindWithTag("Sight").GetComponent<Animator>();
-        animator.speed = 1f / relordTime;
+        animator_sight = GameObject.FindWithTag("Sight").GetComponent<Animator>();
+        animator_sight.speed = 1f / relordTime;
+        animator_supply = GameObject.FindWithTag("SupplyUI").GetComponent<Animator>();
+        animator_supply.gameObject.SetActive(false);
 
         allAmmo = ammoMax;
         nowAmmo = ammoOnce;
         reLording = false;
         noAmmo = false;
         AmmoUIUpdate();
+
+        inSupplyArea = false;
     }
 
     void Update()
@@ -70,6 +78,7 @@ public class PanzerGunControl : MonoBehaviour
         Relord();
         Animation();
         Timer();
+        AmmoSupply();
     }
 
     private void Timer()
@@ -125,7 +134,7 @@ public class PanzerGunControl : MonoBehaviour
         nowAmmo--;
         AmmoUIUpdate();
 
-        animator.Play("Sight", -1, (1f - (float)nowAmmo / ammoOnce));
+        animator_sight.Play("Sight", -1, (1f - (float)nowAmmo / ammoOnce));
 
         if (nowAmmo <= 0)
         {
@@ -137,7 +146,7 @@ public class PanzerGunControl : MonoBehaviour
             else
             {
                 reLording = true;
-                animator.Play("Relord", -1, 0f);
+                animator_sight.Play("Relord", -1, 0f);
             }
         }
     }
@@ -228,5 +237,52 @@ public class PanzerGunControl : MonoBehaviour
 
         NowAmmoUI.text = nowAmmo + "/" + ammoOnce;
         AllAmmoUI.text = allAmmo.ToString();
+    }
+
+    private void AmmoSupply()
+    {
+        if (!inSupplyArea)
+        {
+            return;
+        }
+
+        if (allAmmo >= ammoMax)
+        {
+            animator_supply.Play("Supply", 0, 0f);
+            animator_supply.speed = 0f;
+            animator_supply.gameObject.SetActive(false);
+            return;
+        }
+        else
+        {
+            animator_supply.gameObject.SetActive(true);
+            animator_supply.speed = 0.5f;
+        }
+
+        var state = animator_supply.GetCurrentAnimatorStateInfo(0);
+
+        if (state.normalizedTime >= 1f) 
+        {
+            allAmmo += supplyAmmo;
+            AmmoUIUpdate();
+
+            if (allAmmo < ammoMax)
+            {
+                animator_supply.Play("Supply", 0, 0f);
+            }
+        }
+    }
+
+    public void SupplyIn()
+    {
+        inSupplyArea = true;
+        animator_supply.gameObject.SetActive(true);
+        animator_supply.Play("Supply", 0, 0f);
+    }
+
+    public void SupplyOut()
+    {
+        inSupplyArea = false;
+        animator_supply.gameObject.SetActive(false);
     }
 }
