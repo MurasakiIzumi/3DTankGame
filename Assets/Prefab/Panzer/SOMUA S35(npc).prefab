@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CreatePoint: {fileID: 5928462121042292544}
-  Bullet: {fileID: 3916639827746127666, guid: 6996e132374a91048873e851466d2a27, type: 3}
+  Bullet: {fileID: 3916639827746127666, guid: 3104b9f052d21c94a8ec0af0d50336af, type: 3}
   GunSpark: {fileID: 938860635534822922, guid: eb4032a0706be1f4288b45bb605dfa23, type: 3}
   Gun: {fileID: 2508668485039162879}
   fowardPos: {fileID: 7083089618303222459}
